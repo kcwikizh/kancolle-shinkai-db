@@ -13,12 +13,12 @@
 ### Phase 1
 - [x] 工具:从KcWiki上现有的深海数据，获得深海舰队信息和装备信息，python格式
 - [x] 生成基础数据json
-- [ ] 与实际数据进行对比，添加海域出现信息，甲乙丙
-- [ ] 生成海域信息json
+- [ ] 从json数据生成深海舰队的KcWiki Lua（mediawiki Lua）格式数据
+- [ ] **重要**：与KcWiki技术部确定KcWiki Lua（mediawiki Lua）的格式
 
 ### Phase 2
-- [ ] **重要**：与KcWiki技术部确定KcWiki Lua（mediawiki Lua）的格式
-- [ ] 从json数据生成深海舰队的KcWiki Lua（mediawiki Lua）格式数据
+- [ ] 与实际数据进行对比，添加海域出现信息，甲乙丙
+- [ ] 生成海域信息json，并将信息抽象加入到lua中
 - [ ] 更新到KcWiki
 
 ### Phase 3（填坑）
