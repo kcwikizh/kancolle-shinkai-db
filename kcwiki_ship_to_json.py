@@ -2,13 +2,14 @@
 '''
 import re
 import json
-from pprint import pprint
 
 KCWIKI_SHINKAI_SHIPS = 'original_data/kcwiki_shinkai_ships.txt'
 NEDB_EQUIPS = 'db/equips.nedb'
+NEDB_SHIPS = 'db/ships.nedb'
 
 RE_SHIP_ID = re.compile(r'.*编号=(.*?)\|')
 RE_SHIP_NAMES = re.compile(r'.*中文名=(.*)\|日文名=(.*?)\|')
+RE_SHIP_CLASS = re.compile(r'.*级别=(.*?)\|')
 RE_SHIP_HP = re.compile(r'.*耐久=(.*?)\|')
 RE_SHIP_FIRE = re.compile(r'.*火力=(.*?)\|')
 RE_SHIP_FIRE2 = re.compile(r'.*火力2=(.*?)\|')
@@ -33,7 +34,6 @@ RE_SHIP_CARRY_LIST = [
     re.compile(r'.*搭载4=(.*?)\|'),
     re.compile(r'.*搭载5=(.*?)\|')
 ]
-
 
 SHIP_RANGE_MAPPING_TABLE = {
     '无': -1,
@@ -100,6 +100,23 @@ def kcwiki_ship_get_names(ship, line):
     }
 
 
+def kcwiki_ship_get_class(ship, line):
+    '''Get the class
+    '''
+    match = RE_SHIP_CLASS.match(line)
+    if not match:
+        raise MyException('Get class failed, ship id: {}'.format(ship['id']))
+    ship['class'] = []
+
+    if 'elite' in match.group(1):
+        ship['class'].append('elite')
+    if 'flagship' in match.group(1):
+        ship['class'].append('flagship')
+    if 'late' in match.group(1):
+        ship['class'].append('late')
+    if '改' in match.group(1):
+        ship['class'].append('remodel')
+
 def kcwiki_ship_get_attributes(ship, line):
     '''Get the basic attributes
     '''
@@ -162,25 +179,24 @@ def kcwiki_ship_get_attributes(ship, line):
 def kcwiki_ship_get_equips(ship, line, equip_name_id_mapping_table):
     '''Parse the equipments
     '''
-    equips = []
-    slots = []
+    ship['equips'] = []
+    ship['slots'] = []
     for i in range(MAX_NSLOTS):
         match = RE_SHIP_EQUIP_LIST[i].match(line)
         if not match:
             break
         try:
-            equips.append(equip_name_id_mapping_table[match.group(1)])
-            slots.append(-1)
-        except IndexError:
-            print(equip_name_id_mapping_table[match.group(1)])
-            raise
+            ship['equips'].append(equip_name_id_mapping_table[match.group(1)])
+            ship['slots'].append(-1)
+        except KeyError:
+            if match.group(1) != '鳥型艦攻':
+                raise
 
         match = RE_SHIP_CARRY_LIST[i].match(line)
         if match:
-            slots = int(match.group(1))
+            ship['slots'][i] = int(match.group(1))
 
-    ship['equips'] = equips
-    ship['slots'] = slots
+    ship['carry'] = sum([i for i in ship['slots'] if i >= 0])
 
 
 def kcwiki_ship_line_parser(line, equip_name_id_mapping_table):
@@ -190,10 +206,22 @@ def kcwiki_ship_line_parser(line, equip_name_id_mapping_table):
 
     kcwiki_ship_get_id(ship, line)
     kcwiki_ship_get_names(ship, line)
+    kcwiki_ship_get_class(ship, line)
     kcwiki_ship_get_attributes(ship, line)
     kcwiki_ship_get_equips(ship, line, equip_name_id_mapping_table)
 
     return ship
+
+
+def get_sort_key(ship):
+    '''Add padding if length of ship id less than 3
+
+    for sorted() by ship id.
+    '''
+    ship_id = ship['id']
+    if len(ship_id) < 4:
+        return '0{}'.format(ship_id)
+    return ship_id
 
 
 def main():
@@ -202,14 +230,16 @@ def main():
     nedb_equips = nedb_parser(NEDB_EQUIPS)
     equip_name_id_mapping_table = dict(
         (k['name']['zh_cn'], v) for v, k in nedb_equips.items())
-    ships = {}
+    ships = []
     with open(KCWIKI_SHINKAI_SHIPS, 'r', encoding='utf-8') as kcwiki_ships_f:
         for line in kcwiki_ships_f:
             ship = kcwiki_ship_line_parser(line.replace('?', ''),
                                            equip_name_id_mapping_table)
-            ships[ship['id']] = ship
+            ships.append(ship)
 
-    # pprint(ships)
+    with open(NEDB_SHIPS, 'w', encoding='utf-8') as nedb_f:
+        for ship in sorted(ships, key=get_sort_key):
+            print(str(ship).replace('\'', '"'), end='\n', file=nedb_f)
 
 
 if __name__ == '__main__':

@@ -44,7 +44,7 @@
 {"id": 544, "kcwiki_id": 544, "no": 17, "name": {"ja_jp": "深海爆雷投射機 Mk.II", "zh_cn": "深海爆雷投射机 Mk.II"}, "type": 15, "rare": 4, "attr": {"asw": 13, "range": 0}}
 {"id": 545, "kcwiki_id": 545, "no": 18, "name": {"ja_jp": "深海ソナー Mk.II", "zh_cn": "深海声呐 Mk.II"}, "type": 14, "rare": 4, "attr": {"asw": 16, "range": 0}}
 {"id": 546, "kcwiki_id": 546, "no": 7, "name": {"ja_jp": "飛び魚艦爆", "zh_cn": "飞鱼舰爆"}, "type": 7, "rare": 4, "attr": {"bomb": 10, "aa": 8, "range": 0}}
-{"id": 547, "kcwiki_id": 547, "no": 6, "name": {"ja_jp": "深海猫艦戦", "zh_cn": "深海猫舰战 "}, "type": 6, "rare": 3, "attr": {"aa": 10, "accuracy": 1, "range": 0}}
+{"id": 547, "kcwiki_id": 547, "no": 6, "name": {"ja_jp": "深海猫艦戦", "zh_cn": "深海猫舰战"}, "type": 6, "rare": 3, "attr": {"aa": 10, "accuracy": 1, "range": 0}}
 {"id": 548, "kcwiki_id": 548, "no": 7, "name": {"ja_jp": "深海地獄艦爆", "zh_cn": "深海地狱舰爆"}, "type": 7, "rare": 3, "attr": {"bomb": 11, "accuracy": 3, "los": 3, "range": 0}}
 {"id": 549, "kcwiki_id": 549, "no": 8, "name": {"ja_jp": "深海復讐艦攻", "zh_cn": "深海复仇舰攻"}, "type": 8, "rare": 3, "attr": {"torpedo": 13, "aa": 4, "asw": 5, "accuracy": 2, "los": 5, "range": 0}}
 {"id": 550, "kcwiki_id": 550, "no": 16, "name": {"ja_jp": "5inch連装両用莢砲", "zh_cn": "5英寸连装两用荚炮"}, "type": 1, "rare": 3, "attr": {"fire": 2, "aa": 9, "accuracy": 3, "range": 2}}
@@ -65,7 +65,7 @@
 {"id": 565, "kcwiki_id": 565, "no": 1, "name": {"ja_jp": "5inch沿岸設置砲", "zh_cn": "5英寸沿岸设置炮"}, "type": 1, "rare": 2, "attr": {"fire": 3, "armor": 2, "accuracy": 3, "range": 2}}
 {"id": 566, "kcwiki_id": 566, "no": 7, "name": {"ja_jp": "深海猫艦戦(爆装)", "zh_cn": "深海猫舰战(爆装)"}, "type": 7, "rare": 3, "attr": {"aa": 7, "asw": 2, "accuracy": 2, "bomb": 8, "range": 0}}
 {"id": 567, "kcwiki_id": 567, "no": 11, "name": {"ja_jp": "沿岸設置レーダー", "zh_cn": "沿岸设置雷达"}, "type": 13, "rare": 3, "attr": {"aa": 4, "los": 8, "accuracy": 16, "range": 0}}
-{"id": 568, "kcwiki_id": 568, "no": 3, "name": {"ja_jp": "16inch三連装砲", "zh_cn": "16英寸三连装炮"}, "type": 3, "rare": 5, "attr": {"fire": 24, "aa": 3, "armor": 1, "accuracy": 4, "range": 3}}
+{"id": 568, "kcwiki_id": 568, "no": 3, "name": {"ja_jp": "16inch三連装砲(新)", "zh_cn": "16英寸三连装炮(新)"}, "type": 3, "rare": 5, "attr": {"fire": 24, "aa": 3, "armor": 1, "accuracy": 4, "range": 3}}
 {"id": 569, "kcwiki_id": 569, "no": 10, "name": {"ja_jp": "深海偵察飛行艇", "zh_cn": "深海侦察飞行艇"}, "type": 41, "rare": 4, "attr": {"fire": 3, "aa": 1, "los": 9, "accuracy": 8, "range": 0}}
 {"id": 570, "kcwiki_id": 570, "no": 5, "name": {"ja_jp": "高速深海魚雷 mod.2", "zh_cn": "高速深海鱼雷 mod.2"}, "type": 22, "rare": 4, "attr": {"torpedo": 13, "accuracy": 3, "range": 1}}
 {"id": 571, "kcwiki_id": 571, "no": 10, "name": {"ja_jp": "深海水母小鬼機", "zh_cn": "深海水母小鬼机"}, "type": 11, "rare": 5, "attr": {"fire": 4, "bomb": 15, "aa": 11, "armor": 4, "asw": 15, "accuracy": 8, "los": 8, "range": 4}}
