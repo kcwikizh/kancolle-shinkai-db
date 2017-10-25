@@ -59,7 +59,7 @@ def json_to_lua(ship):
     attr_lua_list[-1] += '\n\t\t}'
 
     attr_lua_list.append(EQUIP_LUA_TEMPLATE.format(
-        ship['carry'],
+        len(ship['slots']),
         ', '.join(str(i) for i in ship['slots']),
         ', '.join(str(i) for i in ship['equips'])))
 
