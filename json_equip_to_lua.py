@@ -64,8 +64,8 @@ def main():
         output.append(json_to_lua(equip))
 
     with open(LUA_EQUIPS, 'w', encoding='utf-8') as lua_f:
-        print(EQUIP_LUA_HEAD, end='', file=lua_f)
-        print(',\n\t'.join(output), file=lua_f)
+        print(EQUIP_LUA_HEAD.replace('\t', '    '), end='', file=lua_f)
+        print(',\n\t'.join(output).replace('\t', '    '), file=lua_f)
         print(EQUIP_LUA_TAIL, file=lua_f)
 
 

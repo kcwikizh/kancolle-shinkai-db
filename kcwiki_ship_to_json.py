@@ -52,6 +52,10 @@ def kcwiki_ship_get_id(ship, line):
     if not match:
         raise MyException('No ship ID in line:\n{}'.format(line))
     ship['id'] = match.group(1)
+    if len(match.group(1)) > 3:
+        ship['kcwiki_id'] = match.group(1)
+    else:
+        ship['kcwiki_id'] = '0{}'.format(match.group(1))
 
 
 def kcwiki_ship_get_names(ship, line):
@@ -83,6 +87,7 @@ def kcwiki_ship_get_class(ship, line):
     if '改' in match.group(1):
         ship['class'].append('remodel')
 
+
 def kcwiki_ship_get_attributes(ship, line):
     '''Get the basic attributes
     '''
@@ -101,6 +106,8 @@ def kcwiki_ship_get_attributes(ship, line):
     match = RE_SHIP_FIRE2.match(line)
     if match:
         ship['attr']['fire2'] = int(match.group(1))
+    else:
+        ship['attr']['fire2'] = ship['attr']['fire']
 
     match = RE_SHIP_TORPEDO.match(line)
     if not match:
@@ -110,6 +117,8 @@ def kcwiki_ship_get_attributes(ship, line):
     match = RE_SHIP_TORPEDO2.match(line)
     if match:
         ship['attr']['torpedo2'] = int(match.group(1))
+    else:
+        ship['attr']['torpedo2'] = ship['attr']['torpedo']
 
     match = RE_SHIP_AA.match(line)
     if not match:
