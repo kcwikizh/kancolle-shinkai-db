@@ -15,7 +15,9 @@ d.shipDataTb = {
 SHIP_LUA_TEMPLATE = '''["{id}"] = {{
 \t\t["日文名"] = "{name[ja_jp]}",
 \t\t["中文名"] = "{name[zh_cn]}",
-\t\t["类别"] = {{{class}}},
+\t\t["完整日文名"] = "{name[fullname_ja_jp]}",
+\t\t["完整中文名"] = "{name[fullname_zh_cn]}",
+\t\t["类别"] = "{yomi}",
 \t\t["属性"] = {{'''
 
 EQUIP_LUA_TEMPLATE = '''\n\t\t["装备"] = {{
@@ -36,34 +38,34 @@ def json_to_lua(ship):
     #
     # we need a pure string:
     # '"elite", "flagship"'
-    ship['class'] = ', '.join('"{}"'.format(i) for i in ship['class'])
+    # ship['class'] = ', '.join('"{}"'.format(i) for i in ship['class'])
     result = SHIP_LUA_TEMPLATE.format(**ship)
-    attr_lua_list = []
-    attr = ship['attr']
+    stats_lua_list = []
+    stats = ship['stats']
 
-    attr_lua_list.append('\n\t\t\t["耐久"] = {}'.format(attr['hp']))
-    attr_lua_list.append('\n\t\t\t["火力"] = {{{}, {}}}'.format(attr['fire'],
-                                                              attr['fire2']))
-    attr_lua_list.append('\n\t\t\t["雷装"] = {{{}, {}}}'.format(attr['torpedo'],
-                                                              attr['torpedo2']))
+    stats_lua_list.append('\n\t\t\t["耐久"] = {}'.format(stats['taik']))
+    stats_lua_list.append('\n\t\t\t["火力"] = {{{}, {}}}'.format(stats['houg'],
+                                                               stats['houg2']))
+    stats_lua_list.append('\n\t\t\t["雷装"] = {{{}, {}}}'.format(stats['raig'],
+                                                               stats['raig2']))
     py_lua_name_table = [
-        ('aa', '对空'),
-        ('armor', '装甲'),
+        ('tyku', '对空'),
+        ('souk', '装甲'),
         ('luck', '运'),
-        ('range', '射程')
+        ('leng', '射程')
     ]
     for pyname, luaname in py_lua_name_table:
-        if pyname in attr:
-            attr_lua_list.append('\n\t\t\t["{}"] = {}'.format(luaname,
-                                                              attr[pyname]))
-    attr_lua_list[-1] += '\n\t\t}'
+        if pyname in stats:
+            stats_lua_list.append('\n\t\t\t["{}"] = {}'.format(luaname,
+                                                              stats[pyname]))
+    stats_lua_list[-1] += '\n\t\t}'
 
-    attr_lua_list.append(EQUIP_LUA_TEMPLATE.format(
+    stats_lua_list.append(EQUIP_LUA_TEMPLATE.format(
         len(ship['slots']),
         ', '.join(str(i) for i in ship['slots']),
         ', '.join(str(i) for i in ship['equips'])))
 
-    return '{}{}\n\t}}'.format(result, ','.join(attr_lua_list))
+    return '{}{}\n\t}}'.format(result, ','.join(stats_lua_list))
 
 def main():
     '''Main process
