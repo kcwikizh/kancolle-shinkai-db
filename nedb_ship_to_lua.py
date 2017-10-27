@@ -12,7 +12,7 @@ SHIP_LUA_HEAD = '''local d = {}
 d.shipDataTb = {
 \t'''
 
-SHIP_LUA_TEMPLATE = '''["{kcwiki_id}"] = {{
+SHIP_LUA_TEMPLATE = '''["{id}"] = {{
 \t\t["日文名"] = "{name[ja_jp]}",
 \t\t["中文名"] = "{name[zh_cn]}",
 \t\t["类别"] = {{{class}}},

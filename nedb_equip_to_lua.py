@@ -16,7 +16,8 @@ d.equipDataTb = {
 EQUIP_LUA_TEMPLATE = '''["{kcwiki_id}"] = {{
 \t\t["日文名"] = "{name[ja_jp]}",
 \t\t["中文名"] = "{name[zh_cn]}",
-\t\t["类别"] = {{1, 1, {type}, {no}}},
+\t\t["类别"] = {type},
+\t\t["图鉴"] =  {no},
 \t\t["稀有度"] = {rare},
 \t\t["属性"] = {{'''
 
