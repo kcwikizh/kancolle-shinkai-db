@@ -164,7 +164,10 @@ def kcwiki_ship_get_equips(ship, line, equip_name_id_mapping_table):
             ship['equips'].append(equip_name_id_mapping_table[match.group(1)])
             ship['slots'].append(-1)
         except KeyError:
-            if match.group(1) != '鳥型艦攻':
+            if match.group(1) == '鳥型艦攻':
+                ship['equips'].append(574)
+                ship['slots'].append(-1)
+            else:
                 raise
 
         match = RE_SHIP_CARRY_LIST[i].match(line)
