@@ -2454,7 +2454,7 @@
         "yomi": "",
         "stats": {
             "taik": 360,
-            "houg": 223,
+            "houg": 90,
             "houg2": 223,
             "raig": 0,
             "raig2": 6,
@@ -2475,7 +2475,19 @@
             64,
             36
         ],
-        "maxeq": 172
+        "maxeq": 172,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2014,
+                    "season": 3,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false
+            }
+        ]
     },
     "1582": {
         "id": 1582,
@@ -2511,7 +2523,19 @@
             80,
             40
         ],
-        "maxeq": 192
+        "maxeq": 192,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2014,
+                    "season": 3,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true
+            }
+        ]
     },
     "1583": {
         "id": 1583,
@@ -2545,7 +2569,19 @@
             58,
             58
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2014,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false
+            }
+        ]
     },
     "1584": {
         "id": 1584,
@@ -2581,7 +2617,19 @@
             96,
             -1
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2014,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true
+            }
+        ]
     },
     "1585": {
         "id": 1585,
@@ -3165,7 +3213,29 @@
             -1,
             6
         ],
-        "maxeq": 6
+        "maxeq": 6,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 1,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 6,
+                    "is_boss": true
+                },
+                "selected_rank": 1
+            }
+        ]
     },
     "1604": {
         "id": 1604,
@@ -3201,7 +3271,49 @@
             -1,
             6
         ],
-        "maxeq": 6
+        "maxeq": 6,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 1,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 6,
+                    "is_boss": true
+                },
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 1,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 6,
+                    "is_boss": true
+                },
+                "selected_rank": 3
+            }
+        ]
     },
     "1605": {
         "id": 1605,
@@ -3237,7 +3349,20 @@
             90,
             90
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1606": {
         "id": 1606,
@@ -3273,7 +3398,31 @@
             108,
             108
         ],
-        "maxeq": 216
+        "maxeq": 216,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1607": {
         "id": 1607,
@@ -3309,7 +3458,20 @@
             108,
             108
         ],
-        "maxeq": 216
+        "maxeq": 216,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1608": {
         "id": 1608,
@@ -3345,7 +3507,31 @@
             130,
             130
         ],
-        "maxeq": 260
+        "maxeq": 260,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1609": {
         "id": 1609,
@@ -3354,8 +3540,8 @@
             "zh_cn": "泊地水鬼",
             "fullname_ja_jp": "泊地水鬼",
             "fullname_zh_cn": "泊地水鬼",
-            "dn_suffix_zh_cn": "（丙前哨战）",
-            "dn_suffix_ja_jp": "（丙前哨戦）"
+            "dn_suffix_zh_cn": "（乙、丙前哨战）",
+            "dn_suffix_ja_jp": "（乙、丙前哨戦）"
         },
         "yomi": "",
         "stats": {
@@ -3381,7 +3567,31 @@
             -1,
             120
         ],
-        "maxeq": 120
+        "maxeq": 120,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1610": {
         "id": 1610,
@@ -3390,8 +3600,8 @@
             "zh_cn": "泊地水鬼",
             "fullname_ja_jp": "泊地水鬼",
             "fullname_zh_cn": "泊地水鬼",
-            "dn_suffix_zh_cn": "（甲、乙前哨战）",
-            "dn_suffix_ja_jp": "（甲、乙前哨戦）"
+            "dn_suffix_zh_cn": "（甲前哨战）",
+            "dn_suffix_ja_jp": "（甲前哨戦）"
         },
         "yomi": "",
         "stats": {
@@ -3417,7 +3627,20 @@
             -1,
             140
         ],
-        "maxeq": 140
+        "maxeq": 140,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1611": {
         "id": 1611,
@@ -3426,8 +3649,8 @@
             "zh_cn": "泊地水鬼",
             "fullname_ja_jp": "泊地水鬼",
             "fullname_zh_cn": "泊地水鬼",
-            "dn_suffix_zh_cn": "（丙最终形态）",
-            "dn_suffix_ja_jp": "（丙最終形態）"
+            "dn_suffix_zh_cn": "（乙、丙最终形态）",
+            "dn_suffix_ja_jp": "（乙、丙最終形態）"
         },
         "yomi": "",
         "stats": {
@@ -3453,7 +3676,31 @@
             -1,
             160
         ],
-        "maxeq": 160
+        "maxeq": 160,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1612": {
         "id": 1612,
@@ -3462,8 +3709,8 @@
             "zh_cn": "泊地水鬼",
             "fullname_ja_jp": "泊地水鬼",
             "fullname_zh_cn": "泊地水鬼",
-            "dn_suffix_zh_cn": "（甲、乙最终形态）",
-            "dn_suffix_ja_jp": "（甲、乙最終形態）"
+            "dn_suffix_zh_cn": "（甲最终形态）",
+            "dn_suffix_ja_jp": "（甲最終形態）"
         },
         "yomi": "",
         "stats": {
@@ -3489,7 +3736,20 @@
             -1,
             180
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1613": {
         "id": 1613,
@@ -4047,7 +4307,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1629": {
         "id": 1629,
@@ -4081,7 +4354,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1630": {
         "id": 1630,
@@ -4115,7 +4412,42 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1631": {
         "id": 1631,
@@ -4151,7 +4483,20 @@
             98,
             98
         ],
-        "maxeq": 392
+        "maxeq": 392,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "selected_rank": 1,
+                "is_final_battle": true
+            }
+        ]
     },
     "1632": {
         "id": 1632,
@@ -4187,7 +4532,20 @@
             98,
             98
         ],
-        "maxeq": 392
+        "maxeq": 392,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "selected_rank": 2,
+                "is_final_battle": true
+            }
+        ]
     },
     "1633": {
         "id": 1633,
@@ -4223,7 +4581,20 @@
             98,
             98
         ],
-        "maxeq": 392
+        "maxeq": 392,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "selected_rank": 3,
+                "is_final_battle": true
+            }
+        ]
     },
     "1634": {
         "id": 1634,
@@ -4491,7 +4862,42 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1642": {
         "id": 1642,
@@ -4525,7 +4931,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1643": {
         "id": 1643,
@@ -4559,7 +4989,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1644": {
         "id": 1644,
@@ -4591,7 +5034,119 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1645": {
         "id": 1645,
@@ -4623,7 +5178,97 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1646": {
         "id": 1646,
@@ -4655,7 +5300,75 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1647": {
         "id": 1647,
@@ -4689,7 +5402,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1648": {
         "id": 1648,
@@ -4723,7 +5460,42 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1649": {
         "id": 1649,
@@ -4757,7 +5529,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2015,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1650": {
         "id": 1650,
@@ -4901,7 +5686,31 @@
             6,
             6
         ],
-        "maxeq": 36
+        "maxeq": 36,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1654": {
         "id": 1654,
@@ -4937,7 +5746,31 @@
             6,
             6
         ],
-        "maxeq": 48
+        "maxeq": 48,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1655": {
         "id": 1655,
@@ -4973,7 +5806,31 @@
             12,
             12
         ],
-        "maxeq": 72
+        "maxeq": 72,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1656": {
         "id": 1656,
@@ -5009,7 +5866,31 @@
             6,
             6
         ],
-        "maxeq": 48
+        "maxeq": 48,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1657": {
         "id": 1657,
@@ -5045,7 +5926,31 @@
             12,
             12
         ],
-        "maxeq": 72
+        "maxeq": 72,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1658": {
         "id": 1658,
@@ -5081,7 +5986,31 @@
             24,
             12
         ],
-        "maxeq": 96
+        "maxeq": 96,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1659": {
         "id": 1659,
@@ -5117,7 +6046,86 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1660": {
         "id": 1660,
@@ -5153,7 +6161,53 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1661": {
         "id": 1661,
@@ -5189,7 +6243,53 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1662": {
         "id": 1662,
@@ -5225,7 +6325,42 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1663": {
         "id": 1663,
@@ -5261,7 +6396,42 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1664": {
         "id": 1664,
@@ -5297,7 +6467,42 @@
             -1,
             4
         ],
-        "maxeq": 4
+        "maxeq": 4,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 2,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1665": {
         "id": 1665,
@@ -6815,7 +8020,31 @@
             12,
             14
         ],
-        "maxeq": 26
+        "maxeq": 26,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1709": {
         "id": 1709,
@@ -6851,7 +8080,31 @@
             24,
             28
         ],
-        "maxeq": 52
+        "maxeq": 52,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1710": {
         "id": 1710,
@@ -6887,7 +8140,31 @@
             36,
             42
         ],
-        "maxeq": 78
+        "maxeq": 78,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1711": {
         "id": 1711,
@@ -6923,7 +8200,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1712": {
         "id": 1712,
@@ -6959,7 +8260,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1713": {
         "id": 1713,
@@ -6995,7 +8320,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2016,
+                    "season": 4,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1914": {
         "id": 1914,
@@ -7099,7 +8448,20 @@
             -1,
             128
         ],
-        "maxeq": 128
+        "maxeq": 128,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1717": {
         "id": 1717,
@@ -7135,7 +8497,20 @@
             -1,
             160
         ],
-        "maxeq": 160
+        "maxeq": 160,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1718": {
         "id": 1718,
@@ -7171,7 +8546,20 @@
             -1,
             192
         ],
-        "maxeq": 192
+        "maxeq": 192,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1719": {
         "id": 1719,
@@ -7207,7 +8595,20 @@
             -1,
             144
         ],
-        "maxeq": 144
+        "maxeq": 144,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1720": {
         "id": 1720,
@@ -7243,7 +8644,20 @@
             -1,
             176
         ],
-        "maxeq": 176
+        "maxeq": 176,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1721": {
         "id": 1721,
@@ -7279,7 +8693,20 @@
             -1,
             206
         ],
-        "maxeq": 206
+        "maxeq": 206,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 1,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1722": {
         "id": 1722,
@@ -7315,7 +8742,31 @@
             36,
             36
         ],
-        "maxeq": 136
+        "maxeq": 136,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1723": {
         "id": 1723,
@@ -7351,7 +8802,31 @@
             36,
             36
         ],
-        "maxeq": 136
+        "maxeq": 136,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1724": {
         "id": 1724,
@@ -7387,7 +8862,31 @@
             36,
             36
         ],
-        "maxeq": 136
+        "maxeq": 136,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 3,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1725": {
         "id": 1725,
@@ -7423,7 +8922,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1726": {
         "id": 1726,
@@ -7459,7 +8982,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1727": {
         "id": 1727,
@@ -7495,7 +9042,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1728": {
         "id": 1728,
@@ -7531,7 +9102,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1729": {
         "id": 1729,
@@ -7567,7 +9151,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1730": {
         "id": 1730,
@@ -7603,7 +9200,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1731": {
         "id": 1731,
@@ -7639,7 +9249,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1732": {
         "id": 1732,
@@ -7675,7 +9298,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1733": {
         "id": 1733,
@@ -7711,7 +9347,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 2,
+                    "event_id": 5,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1734": {
         "id": 1734,
@@ -7811,7 +9460,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1737": {
         "id": 1737,
@@ -7843,7 +9516,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1738": {
         "id": 1738,
@@ -7875,7 +9572,31 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1739": {
         "id": 1739,
@@ -8103,7 +9824,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1746": {
         "id": 1746,
@@ -8139,7 +9873,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1747": {
         "id": 1747,
@@ -8175,7 +9922,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1748": {
         "id": 1748,
@@ -8211,7 +9971,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1749": {
         "id": 1749,
@@ -8247,7 +10020,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1750": {
         "id": 1750,
@@ -8283,7 +10069,20 @@
             -1,
             -1
         ],
-        "maxeq": 0
+        "maxeq": 0,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1751": {
         "id": 1751,
@@ -8387,7 +10186,53 @@
             -1,
             -1
         ],
-        "maxeq": 32
+        "maxeq": 32,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1754": {
         "id": 1754,
@@ -8423,7 +10268,31 @@
             -1,
             -1
         ],
-        "maxeq": 32
+        "maxeq": 32,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 1,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            },
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 4,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1755": {
         "id": 1755,
@@ -8459,7 +10328,20 @@
             -1,
             60
         ],
-        "maxeq": 60
+        "maxeq": 60,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 1
+            }
+        ]
     },
     "1756": {
         "id": 1756,
@@ -8495,7 +10377,20 @@
             -1,
             120
         ],
-        "maxeq": 120
+        "maxeq": 120,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 2
+            }
+        ]
     },
     "1757": {
         "id": 1757,
@@ -8531,7 +10426,20 @@
             -1,
             180
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": false,
+                "selected_rank": 3
+            }
+        ]
     },
     "1758": {
         "id": 1758,
@@ -8567,7 +10475,20 @@
             -1,
             120
         ],
-        "maxeq": 120
+        "maxeq": 120,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 1
+            }
+        ]
     },
     "1759": {
         "id": 1759,
@@ -8603,7 +10524,20 @@
             -1,
             180
         ],
-        "maxeq": 180
+        "maxeq": 180,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 2
+            }
+        ]
     },
     "1760": {
         "id": 1760,
@@ -8639,7 +10573,20 @@
             -1,
             198
         ],
-        "maxeq": 198
+        "maxeq": 198,
+        "appears": [
+            {
+                "map": {
+                    "is_event": true,
+                    "year": 2017,
+                    "season": 3,
+                    "event_id": 7,
+                    "is_boss": true
+                },
+                "is_final_battle": true,
+                "selected_rank": 3
+            }
+        ]
     },
     "1761": {
         "id": 1761,

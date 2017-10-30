@@ -19,7 +19,9 @@ def main():
         objs = json.load(json_f)
         with open(args.fout, 'w', encoding='utf-8') as nedb_f:
             for obj in objs:
-                print(str(objs[obj]).replace("'", '"'), file=nedb_f)
+                json.dump(obj=objs[obj], fp=nedb_f, ensure_ascii=False)
+                nedb_f.write('\n')
+                # print(str(objs[obj]).replace("'", '"'), file=nedb_f)
 
 if __name__ == '__main__':
     main()
