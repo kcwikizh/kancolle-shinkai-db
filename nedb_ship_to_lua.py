@@ -30,24 +30,73 @@ SHIP_LUA_TAIL = '''}
 
 return d'''
 
+SEASON_ID_NAME_TABLE = [
+    None,
+    '冬',
+    '春',
+    '夏',
+    '秋'
+]
+
+SELECTED_RANK_ID_NAME_TABLE = [
+    '无',
+    '丙',
+    '乙',
+    '甲'
+]
+
+
+def get_appears_output(ship):
+    '''Get the appears info
+
+    OK, Ugly code~~
+    VERY UGLY!
+    '''
+    output = []
+    if 'appears' not in ship:
+        return ''
+
+    for i in ship['appears']:
+        appears_output = []
+        map_output = []
+        map_output.append('\t\t\t\t\t["限定海域"] = {}'.format(
+            'true' if i['map']['is_event'] else 'false'))
+        if i['map']['is_event']:
+            map_output.append('\n\t\t\t\t\t["年"] = {}'.format(
+                i['map']['year']))
+            map_output.append('\n\t\t\t\t\t["季节"] = "{}"'.format(
+                SEASON_ID_NAME_TABLE[i['map']['season']]))
+            map_output.append('\n\t\t\t\t\t["海域"] = "E-{}"'.format(
+                i['map']['event_id']))
+
+        map_output.append('\n\t\t\t\t\t["Boss"] = {}'.format(
+            'true' if i['map']['is_boss'] else 'false'))
+
+        appears_output.append('\t\t\t\t["map"] = {{\n{}\n\t\t\t\t}}'.format(
+            ','.join(map_output)))
+        if 'is_final_battle' in i:
+            appears_output.append('\n\t\t\t\t["最终战"] = {}'.format(
+                'true' if i['is_final_battle'] else 'false'))
+        if 'selected_rank' in i:
+            appears_output.append('\n\t\t\t\t["选择难度"] = "{}"'.format(
+                SELECTED_RANK_ID_NAME_TABLE[i['selected_rank']]))
+        output.append('\n\t\t\t{{\n{}\n\t\t\t}}'.format(','.join(appears_output)))
+
+    return '{}\n\t\t}}'.format(','.join(output))
+
+
 def json_to_lua(ship):
     '''Output the lua code
     '''
-    # original ship['class'] is a list contains strings:
-    # ['elite', 'flagship']
-    #
-    # we need a pure string:
-    # '"elite", "flagship"'
-    # ship['class'] = ', '.join('"{}"'.format(i) for i in ship['class'])
     result = SHIP_LUA_TEMPLATE.format(**ship)
-    stats_lua_list = []
+    output = []
     stats = ship['stats']
 
-    stats_lua_list.append('\n\t\t\t["耐久"] = {}'.format(stats['taik']))
-    stats_lua_list.append('\n\t\t\t["火力"] = {{{}, {}}}'.format(stats['houg'],
-                                                               stats['houg2']))
-    stats_lua_list.append('\n\t\t\t["雷装"] = {{{}, {}}}'.format(stats['raig'],
-                                                               stats['raig2']))
+    output.append('\n\t\t\t["耐久"] = {}'.format(stats['taik']))
+    output.append('\n\t\t\t["火力"] = {{{}, {}}}'.format(stats['houg'],
+                                                       stats['houg2']))
+    output.append('\n\t\t\t["雷装"] = {{{}, {}}}'.format(stats['raig'],
+                                                       stats['raig2']))
     py_lua_name_table = [
         ('tyku', '对空'),
         ('souk', '装甲'),
@@ -56,16 +105,20 @@ def json_to_lua(ship):
     ]
     for pyname, luaname in py_lua_name_table:
         if pyname in stats:
-            stats_lua_list.append('\n\t\t\t["{}"] = {}'.format(luaname,
-                                                              stats[pyname]))
-    stats_lua_list[-1] += '\n\t\t}'
+            output.append('\n\t\t\t["{}"] = {}'.format(luaname,
+                                                       stats[pyname]))
+    output[-1] += '\n\t\t}'
 
-    stats_lua_list.append(EQUIP_LUA_TEMPLATE.format(
+    output.append(EQUIP_LUA_TEMPLATE.format(
         len(ship['slots']),
         ', '.join(str(i) for i in ship['slots']),
         ', '.join(str(i) for i in ship['equips'])))
 
-    return '{}{}\n\t}}'.format(result, ','.join(stats_lua_list))
+    if 'appears' in ship:
+        output.append('\n\t\t["出现海域"] = {{{}'.format(get_appears_output(ship)))
+
+    return '{}{}\n\t}}'.format(result, ','.join(output))
+
 
 def main():
     '''Main process
