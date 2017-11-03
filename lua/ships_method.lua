@@ -1,7 +1,7 @@
 --- Source code of KcWiki "模块:深海舰队函数"
 -- Provide lua APIs to get shinkai ship data from "模块:深海舰队数据"
--- github: https://github.com/kcwikizh/kancolle-shinkai-db/blob/develop/lua/ships_method.lua 
--- Any question please contact McZoden by github issue.
+-- https://github.com/kcwikizh/kancolle-shinkai-db/tree/develop/lua
+-- Please contact us by github issue, or join our QQ group: 302265393
 --
 -- coding style refers to <<Programming in Lua Third Edition>>
 -- but indented is 4 spaces.
