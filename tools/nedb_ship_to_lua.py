@@ -9,7 +9,7 @@ SHIP_LUA_HEAD = '''local d = {}
 -- 以下为舰娘数据列表 -- 
 ------------------------
 
-d.shipDataTb = {
+d.ship_data_table = {
 \t'''
 
 SHIP_LUA_TEMPLATE = '''["{id}"] = {{
@@ -29,6 +29,14 @@ EQUIP_LUA_TEMPLATE = '''\n\t\t["装备"] = {{
 SHIP_LUA_TAIL = '''}
 
 return d'''
+
+LENG_ID_NAME_TABLE = [
+    '未知',
+    '短',
+    '中',
+    '长',
+    '超长',
+]
 
 SEASON_ID_NAME_TABLE = [
     None,
@@ -101,12 +109,12 @@ def json_to_lua(ship):
         ('tyku', '对空'),
         ('souk', '装甲'),
         ('luck', '运'),
-        ('leng', '射程')
     ]
     for pyname, luaname in py_lua_name_table:
         if pyname in stats:
             output.append('\n\t\t\t["{}"] = {}'.format(luaname,
                                                        stats[pyname]))
+    output.append('\n\t\t\t["射程"] = "{}"'.format(LENG_ID_NAME_TABLE[stats['leng']]))
     output[-1] += '\n\t\t}'
 
     output.append(EQUIP_LUA_TEMPLATE.format(
