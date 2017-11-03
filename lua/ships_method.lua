@@ -1,8 +1,8 @@
 --- Source code of KcWiki "模块:深海舰队函数"
 -- Provide lua APIs to get shinkai ship data from "模块:深海舰队数据"
 -- https://github.com/kcwikizh/kancolle-shinkai-db/tree/develop/lua
--- Please contact us by github issue, or join our QQ group: 302265393
---
+-- Please contact us by github issue
+
 -- coding style refers to <<Programming in Lua Third Edition>>
 -- but indented is 4 spaces.
 
@@ -67,8 +67,8 @@ local function get_data_directly (ship, args, last_number_index)
 
     if last_number_index then
         -- convert string -> number with validation
-        last_arg = args[#args]
-        data = tonumber(last_arg)
+        local last_arg = args[#args]
+        local data = tonumber(last_arg)
         if data == nil then
             return false, string.format('索引不是整数: %s',
                 table.concat(args, '|'))
@@ -89,6 +89,7 @@ local function get_data_directly (ship, args, last_number_index)
 
     return true, tostring(var)
 end
+
 
 --- Get the ship attribute, specified by args, and maybe contains index at last
 -- @param ship: lua table of this ship
@@ -114,13 +115,14 @@ end
 -- @return (bool, string) : true and the data that user want to get,
 -- or false followed by an error message.
 local function get_equip_name_by_id (equip_id)
-    equip_id = tostring(equip_id)
-    equip_data = equip_data_table[equip_id]
+    local equip_id = tostring(equip_id)
+    local equip_data = equip_data_table[equip_id]
+
     if equip_data == nil then
         return false, string.format('equip ID不存在: %s', equip_id)
     end
 
-    equip_name = equip_data['中文名']
+    local equip_name = equip_data['中文名']
     if equip_name == nil then
         return false, string.format('中文名缺失，equip ID: %s ', equip_id)
     end
@@ -146,7 +148,7 @@ local function get_equip_data (ship, args)
     end
 
     if arg3 == '搭载' then
-        result, data = get_data_directly(ship, args, true)
+        local result, data = get_data_directly(ship, args, true)
         if data == '-1' then
             data = ''
         end
@@ -154,7 +156,7 @@ local function get_equip_data (ship, args)
     end
 
     if arg3 == '装备' then
-        result, data = get_data_directly(ship, args, true)
+        local result, data = get_data_directly(ship, args, true)
         if result == false then
             return result, data
         end
@@ -198,7 +200,7 @@ function p.get_ship_by_id (frame)
             table.concat(frame.args, '|')))
     end
 
-    status, data = get_data_method(ship, frame.args)
+    local status, data = get_data_method(ship, frame.args)
     if status == false then
         return err_msg(data)
     end
