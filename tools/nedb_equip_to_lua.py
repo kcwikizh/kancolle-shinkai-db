@@ -25,6 +25,14 @@ EQUIP_LUA_TAIL = '''}
 
 return d'''
 
+LENG_ID_NAME_TABLE = [
+    '无',
+    '短',
+    '中',
+    '长',
+    '超长',
+    '超超长'
+]
 
 def json_to_lua(equip):
     '''Output the lua code
@@ -42,8 +50,7 @@ def json_to_lua(equip):
         ('asw', '对潜'),
         ('accuracy', '命中'),
         ('los', '索敌'),
-        ('evasion', '回避'),
-        ('range', '射程')
+        ('evasion', '回避')
     ]
 
     for pyname, luaname in py_lua_name_table:
@@ -51,6 +58,8 @@ def json_to_lua(equip):
             attr_lua_list.append('\n\t\t\t["{}"] = {}'.format(luaname,
                                                               attr[pyname]))
 
+    attr_lua_list.append('\n\t\t\t["射程"] = "{}"'.format(
+        LENG_ID_NAME_TABLE[attr['range']]))
     return '{}{}\n\t\t}}\n\t}}'.format(result, ','.join(attr_lua_list))
 
 
