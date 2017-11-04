@@ -31,7 +31,7 @@ SHIP_LUA_TAIL = '''}
 return d'''
 
 LENG_ID_NAME_TABLE = [
-    '未知',
+    '无',
     '短',
     '中',
     '长',
