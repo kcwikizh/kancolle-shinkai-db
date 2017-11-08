@@ -60,17 +60,12 @@ end
 local function get_data_directly (ship, args, last_number_index)
     local var = ship
 
-    if #args < 2 then
-        return false, string.format('参数个数小于2: %s',
-            table.concat(args, '|'))
-    end
-
     if last_number_index then
         -- convert string -> number with validation
         local last_arg = args[#args]
         local data = tonumber(last_arg)
         if data == nil then
-            return false, string.format('索引不是整数: %s',
+            return false, string.format('最后一个参数不是整数: %s',
                 table.concat(args, '|'))
         end
         args[#args] = data
@@ -85,6 +80,11 @@ local function get_data_directly (ship, args, last_number_index)
                     table.concat(args, '|'))
             end
         end
+    end
+
+    if type(var) == 'table' then
+        return false, string.format('参数个数过少: %s',
+            table.concat(args, '|'))
     end
 
     return true, tostring(var)
