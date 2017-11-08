@@ -9,8 +9,8 @@
 -- If you are pasting source code to 模块:深海舰队函数
 -- You must uncomment this block
 --[[
-local ships = require('模块:舰娘数据')
-local equips = require('模块:舰娘装备数据改')
+local ships = require('模块:深海舰队数据')
+local equips = require('模块:深海装备数据')
 --]]
 -- If you are pasting source code to 模块:深海舰队函数
 -- You must comment these 2 lines
