@@ -9,7 +9,7 @@ SHIP_LUA_HEAD = '''local d = {}
 -- 以下为舰娘数据列表 -- 
 ------------------------
 
-d.ship_data_table = {
+d.shipDataTable = {
 \t'''
 
 SHIP_LUA_TEMPLATE = '''["{id}"] = {{

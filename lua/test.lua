@@ -11,8 +11,8 @@ local table = {
     concat = table.concat
 }
 
-function do_ships_method_test ()
-    local test_args_list = {
+function doShipsMethodTest ()
+    local testArgsList = {
         {'1746', '日文名'},
         {'1746', '属性', '火力', '1'},
         {'1746', '属性', '火力'},
@@ -37,15 +37,15 @@ function do_ships_method_test ()
         {'1661', '装备', '装备', '5'}
     }
 
-    for _, v in ipairs(test_args_list) do
+    for _, v in ipairs(testArgsList) do
         print(string.format('[Invoke] %s', table.concat(v, '|')))
-        print('\t' .. ships_method.getSpDataById({args = v}))
+        print('\t' .. ships_method.getShipDataById({args = v}))
     end
 end
 
-function do_equips_get_data_test ()
-    print('do_equips_get_data_test')
-    local test_args_list = {
+function doEquipsGetDataTest ()
+    print('doEquipsGetDataTest')
+    local testArgsList = {
         {'507', '日文名'},
         {'2507', '日文名'},
         {'507', 'a'},
@@ -55,25 +55,25 @@ function do_equips_get_data_test ()
         {'507', '属性'}
     }
 
-    for _, v in ipairs(test_args_list) do
+    for _, v in ipairs(testArgsList) do
         print(string.format('[Invoke] %s', table.concat(v, '|')))
         print('\t' .. equips_method.getEqDataById({args = v}))
     end
 end
 
-function do_equips_get_equips_list_wiki ()
-    print(equips_method.get_equips_list_wiki())
+function doEquipsGetEquipsListWiki ()
+    print(equips_method.getEquipsListWiki())
 end
 
-function do_equips_method_test ()
-    -- do_equips_get_data_test()
-    do_equips_get_equips_list_wiki()
+function doEquipsMethodTest ()
+    -- doEquipsGetDataTest()
+    doEquipsGetEquipsListWiki()
 end
 
 
 function main ()
-    -- do_ships_method_test()
-    do_equips_method_test()
+    -- doShipsMethodTest()
+    doEquipsMethodTest()
 end
 
 main()

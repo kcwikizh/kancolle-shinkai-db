@@ -10,7 +10,7 @@ EQUIP_LUA_HEAD = '''local d = {}
 -- 以下为装备数据列表 -- 
 ------------------------
 
-d.equipDataTb = {
+d.equipDataTable = {
 \t'''
 
 EQUIP_LUA_TEMPLATE = '''["{kcwiki_id}"] = {{
