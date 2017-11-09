@@ -275,8 +275,9 @@ function p.getEquipsListWiki ()
             '</td>'}))
         -- name
         table.insert(wikiText, table.concat({
-            '<td lang="ja" xml:lang="ja" style="background-color: #cacaca;">',
-            equip['日文名'], '</tr>'}))
+            '<td style="background-color: #cacaca;">',
+            string.format('{{lang|ja|%s}}', equip['日文名']),
+            '</tr>'}))
         table.insert(wikiText, table.concat({
             '<tr><td style="background-color: #eaeaea;">',
             equip['中文名'], '</td></tr>'}))
