@@ -34,7 +34,8 @@ function doShipsMethodTest ()
         {'1661', '装备', '装备', '2'},
         {'1661', '装备', '装备', '3'},
         {'1661', '装备', '装备', '4'},
-        {'1661', '装备', '装备', '5'}
+        {'1661', '装备', '装备', '5'},
+        {'1661', '装备', '装备', '5', '1'}
     }
 
     for _, v in ipairs(testArgsList) do
@@ -52,7 +53,8 @@ function doEquipsGetDataTest ()
         {'507'},
         {'507', '属性', '火力'},
         {'507', '属性', '火力1'},
-        {'507', '属性'}
+        {'507', '属性'},
+        {'507', '属性', '火力', '1'},
     }
 
     for _, v in ipairs(testArgsList) do
@@ -72,7 +74,7 @@ end
 
 
 function main ()
-    -- doShipsMethodTest()
+    doShipsMethodTest()
     doEquipsMethodTest()
 end
 
