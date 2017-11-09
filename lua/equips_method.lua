@@ -180,7 +180,7 @@ end
 --- Get the equip data by equip id (api_start2)
 -- @param frame: all parameters by invoke {{#invoke:}} of wiki.
 -- @return string: the formated data, or error messages.
-function p.getEquipById (frame)
+function p.getEquipDataById (frame)
     -- Something strange that:
     -- frame.args can't be table.concat or passed to deep function as parameter
     -- or it will be an empty table, such as: table.concat(frame.args) -> ''

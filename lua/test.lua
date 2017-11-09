@@ -57,16 +57,16 @@ function doEquipsGetDataTest ()
 
     for _, v in ipairs(testArgsList) do
         print(string.format('[Invoke] %s', table.concat(v, '|')))
-        print('\t' .. equips_method.getEqDataById({args = v}))
+        print('\t' .. equips_method.getEquipDataById({args = v}))
     end
 end
 
 function doEquipsGetEquipsListWiki ()
-    print(equips_method.getEquipsListWiki())
+    equips_method.getEquipsListWiki()
 end
 
 function doEquipsMethodTest ()
-    -- doEquipsGetDataTest()
+    doEquipsGetDataTest()
     doEquipsGetEquipsListWiki()
 end
 

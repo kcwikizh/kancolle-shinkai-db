@@ -191,7 +191,7 @@ function p.getShipDataById (frame)
             table.concat(frame.args, '|')))
     end
 
-    local status, data = getDataMethod(ship, frame.args)
+    local status, data = getDataMethod(ship, args)
     if status == false then
         return errMsg(data)
     end
