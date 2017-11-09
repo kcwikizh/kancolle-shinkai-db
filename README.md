@@ -6,7 +6,7 @@
 
 提供诸如nedb、json、lua格式的原生数据，供其他应用使用
 
-以及KcWiki的Lua函数
+以及KcWiki的Lua API函数
 
 ---
 
@@ -26,13 +26,15 @@
 
 ### Phase 3（啥玩意儿啊，咋回事啊，那咋整啊，大佬帮帮忙啊）
 - [x] 深海舰队函数
-- [ ] 深海舰队函数说明文档
-- [ ] 深海装备函数
+- [x] 深海装备函数
+- [ ] 深海舰队模板
 
-### Phase 4（填坑）
+### Phase 4
+- [ ] Github Wiki
+- [ ] KcWiki Doc
+
+### Phase 5（填坑）
 - [ ] 代码优化
 - [ ] Python2的支持
 - [ ] 工具：从json直接生成KcWiki的“深海列表”页面
 - [ ] 工具：从json直接生成KcWIki的“装备列表”页面
-
-~~flag： 完成Phase 2就买块Dell P2417H~~
