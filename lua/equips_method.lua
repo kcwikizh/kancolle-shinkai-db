@@ -227,7 +227,7 @@ function p.getEquipsListWiki ()
     table.insert(wikiText,
         '<th style="width: 5%; background-color: #e2e2e2;">射程</th>')
     table.insert(wikiText,
-        '<th style="width: 20%; background-color: #e2e2e2;">射程</th>')
+        '<th style="width: 20%; background-color: #e2e2e2;">备注</th>')
     table.insert(wikiText, '</tr>')
 
     -- Just sort the equip ID
