@@ -223,9 +223,11 @@ function p.getEquipsListWiki ()
     table.insert(wikiText,
         '<th style="width: 10%; background-color: #e2e2e2;">类型</th>')
     table.insert(wikiText,
-        '<th style="width: 20%; background-color: #e2e2e2;">数据</th>')
+        '<th style="width: 40%; background-color: #e2e2e2;">数据</th>')
     table.insert(wikiText,
         '<th style="width: 5%; background-color: #e2e2e2;">射程</th>')
+    table.insert(wikiText,
+        '<th style="width: 20%; background-color: #e2e2e2;">射程</th>')
     table.insert(wikiText, '</tr>')
 
     -- Just sort the equip ID
@@ -275,8 +277,12 @@ function p.getEquipsListWiki ()
             '</td>'}))
         -- name
         table.insert(wikiText, table.concat({
-            '<td style="background-color: #cacaca;">',
-            string.format('{{lang|ja|%s}}', equip['日文名']),
+            -- Here is a bug about wikipedia
+            -- no matter add lang="ja" xml:lang="ja" in <td>
+            -- use <span lang="ja">
+            -- wiki can't resolv it to japanese fonts
+            '<td lang="ja" xml:lang="ja" style="background-color: #cacaca;">',
+            equip['日文名'],
             '</tr>'}))
         table.insert(wikiText, table.concat({
             '<tr><td style="background-color: #eaeaea;">',
@@ -331,6 +337,14 @@ function p.getEquipsListWiki ()
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
             range or '无',
+            '</td>'}))
+
+        -- remarks
+        talbe.insert(wikiText, table.concat({
+            '<td style="text-align: left; vertical-align: center; ',
+            'background-color: #f2f2f2; border-style: solid none; ',
+            'border-width: 1px;">',
+            equip['备注'] or '',
             '</td>'}))
 
         table.insert(wikiText, '</tr>')
