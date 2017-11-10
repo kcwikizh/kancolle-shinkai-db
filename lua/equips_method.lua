@@ -340,7 +340,7 @@ function p.getEquipsListWiki ()
             '</td>'}))
 
         -- remarks
-        talbe.insert(wikiText, table.concat({
+        table.insert(wikiText, table.concat({
             '<td style="text-align: left; vertical-align: center; ',
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
