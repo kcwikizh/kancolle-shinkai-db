@@ -57,6 +57,10 @@ local function getDataDirectly (ship, args, lastNumIdx)
     for i, v in ipairs(args) do
         -- Skip args[1] because it's ship ID.
         if i > 1 then
+            if type(var) ~= 'table' then
+                return fale, errMsg(string.format('参数个数过多: %s',
+                    table.concat(args, '|')))
+            end
             var = var[v]
             if var == nil then
                 return false, string.format('索引越界: %s',
@@ -152,6 +156,26 @@ local function getEquipData (ship, args)
 end
 
 
+--- Get the number of total planes can carry
+-- @param ship: lua table of this ship
+-- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
+-- @return (bool, string) : true and the number in string format,
+-- or false followed by an error message.
+local function getPlanesNum (ship)
+    local num = 0
+
+    for _, v in ipairs(ship['装备']['搭载']) do
+        if type(v) == 'number' then
+            if v > 0 then
+                num = num + v
+            end
+        end
+    end
+
+    return true, tostring(num)
+end
+
+
 -- A table stores each method to get data
 local getShipDataMethodTable = {
     ['日文名'] = getDataDirectly,
@@ -161,6 +185,7 @@ local getShipDataMethodTable = {
     ['类别'] = getDataDirectly,
     ['属性'] = getAttrData,
     ['装备'] = getEquipData,
+    ['搭载量'] = getPlanesNum,
     ['出现海域'] = function ()
         return false, '还不支持出现海域查询'
     end
@@ -188,7 +213,7 @@ function p.getShipDataById (frame)
     local getDataMethod = getShipDataMethodTable[args[2]]
     if getDataMethod == nil then
         return errMsg(string.format('第二个参数不正确: %s',
-            table.concat(frame.args, '|')))
+            table.concat(args, '|')))
     end
 
     local status, data = getDataMethod(ship, args)

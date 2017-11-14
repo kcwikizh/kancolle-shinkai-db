@@ -1,0 +1,107 @@
+<onlyinclude>{| class="wikitable" style="border: 1px solid #aaaaaa;"
+ | rowspan="14" colspan="2" |
+    {{{!}} style="margin-left: auto; margin-right: auto;"
+    {{!}} style="text-align: center" {{!}}[[文件:ShinkaiSeikan{{{编号}}}Banner.png]]{{#if: {{{编号2|}}} |<br />[[文件:ShinkaiSeikan{{{编号2}}}Banner.png]]}}
+    {{#if: {{{编号3|}}} |<br />[[文件:ShinkaiSeikan{{{编号3}}}Banner.png]]}}
+    {{!}}-
+    {{!}} style="text-align: center" {{!}}[[文件:ShinkaiSeikan{{{编号}}}.png|400px]]{{#if: {{{编号2|}}} |<br />[[文件:ShinkaiSeikan{{{编号2}}}.png|400px]]}}
+    {{#if: {{{编号3|}}} |<br />[[文件:ShinkaiSeikan{{{编号3}}}.png|400px]]}}
+    {{!}}}
+ ! colspan="2" |编号
+ | colspan="2" style="text-align: center" |{{{编号}}}
+ <!-- radar-->
+ ! colspan="4" | 雷达图
+ <!-- /radar-->
+ |-
+ ! colspan="2" |{{Ruby-ja|{{#invoke:深海舰队函数|getShipDataById|{{{编号}}}|完整日文名}}}}
+ ! colspan="2" |{{#invoke:深海舰队函数|getShipDataById|{{{编号}}}|完整中文名}}
+ ! rowspan="10" colspan="4" |
+{{#widget:ChartRadar
+|id={{{编号}}}
+<!--|kc.a1 = 火力/{{#if: {{{火力最大值}}} |!0}}/{{#if: {{{火力弱化值}}} |!0}}
+|kc.a2 = 雷装/{{#if: {{{雷装最大值}}} |!0}}/{{#if: {{{雷装弱化值}}} |!0}}
+|kc.a3 = 对空/{{#if: {{{对空最大值}}} |!0}}/{{#if: {{{对空弱化值}}} |!0}}
+|kc.a4 = 装甲/{{#if: {{{装甲最大值}}} |!0}}/{{#if: {{{装甲弱化值}}} |!0}}
+|kc.a5 = 运/{{#if: {{{运最大值}}} |!0}}/{{#if: {{{运弱化值}}} |!0}} -->
+|kc.a1 = 火力 / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|火力|2}} / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|火力|1}}
+|kc.a2 = 雷装 /  {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|雷装|2}} / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|雷装|1}}
+|kc.a3 = 对空 / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对空|2}} / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对空|1}}
+|kc.a4 = 装甲 /  {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|装甲|2}} / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|装甲|1}}
+|kc.a5 = 运   / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|运|2}} / {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|运|1}}
+}}
+ |-
+ | colspan="4" style="text-align: center" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|类别}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoHP.png|耐久]] 耐久
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|耐久|1}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoAtk.png|火力]] 火力
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|火力|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|火力|2}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoArmor.png|装甲]] 装甲
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|装甲|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|装甲|2}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoTorpedo.png|雷装]] 雷装
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|雷装|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|雷装|2}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoEvasion.png|回避]] 回避
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|回避|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|回避|2}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoAA.png|对空]] 对空
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对空|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对空|2}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoAircraft.png|搭载]] 搭载
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|搭载}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoASW.png|对潜]] 对潜
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对潜|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|对潜|2}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoSpeed.png|速力]] 速力
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|速力}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoLOS.png|索敌]] 索敌
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|索敌|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|索敌|2}}
+ |-
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoRange.png|射程]] 射程
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|射程}}
+ ! style="text-align: center; vertical-align: middle;" |[[文件:IcoLuck.png|运]] 运
+ | style="text-align: center; vertical-align: middle;" |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|运|1}}→{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|数据|运|2}}
+ |-
+ {{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} |!搭载}}
+ !{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} | colspan="3"| colspan="4"}} style="vertical-align: middle;" |装备
+ |-
+ {{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} |{{!}} style="text-align: center" {{!}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}}}}
+ |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} | colspan="3"| colspan="4"}} style="vertical-align: middle;" |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|1}} |{{#ifeq: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|1}}|无装备|无装备|{{#switch: {{{type}}} | #default =[[{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|1}}]]| shinkai | user ={{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|1}}}}}}|''不能装备''}}
+ |-
+ {{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} |{{!}} style="text-align: center" {{!}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|2}}}}
+ |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} | colspan="3"| colspan="4"}} style="vertical-align: middle;" |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|2}} |{{#ifeq: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|2}}|无装备|无装备|{{#switch: {{{type}}} | #default =[[{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|2}}]]| shinkai | user ={{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|2}}}}}}|''不能装备''}}
+ |-
+ {{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} |{{!}} style="text-align: center" {{!}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|3}}}}
+ |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} | colspan="3"| colspan="4"}} style="vertical-align: middle;" |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|3}} |{{#ifeq: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|3}}|无装备|无装备|{{#switch: {{{type}}} | #default =[[{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|3}}]]| shinkai | user ={{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|3}}}}}}|''不能装备''}}
+ |-
+ {{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} |{{!}} style="text-align: center" {{!}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|4}}}}
+ |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|搭载|1}} | colspan="3" | colspan="4" }} style="vertical-align: middle;" |{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|4}} |{{#ifeq: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|4}}|无装备|无装备|{{#switch: {{{type}}} | #default =[[{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|4}}]]| shinkai | user ={{#invoke:舰娘函数|getSpDataById|{{{编号}}}|装备|初期装备|4}}}}}}|''不能装备''}}
+ |-
+ {{#switch: {{{type}}}
+ | #default =! style="text-align: right" {{!}}入手方式
+ {{!}} style="text-align: left" {{!}}{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|入手方式}}
+ ! style="text-align: right" {{!}}补给需要
+ {{!}} colspan="3" style="text-align: center;" {{!}}[[文件:IcoFuel.png|20px|燃料]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|消耗|燃料}} [[文件:IcoAmmo.png|20px|弹药]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|消耗|弹药}}
+ {{!}}-
+ ! style="text-align: right" {{!}}改造消耗
+ {{!}} style="text-align: center;" {{!}}{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改造|钢材}}|[[文件:IcoAmmo.png|20px|弹药]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改造|弹药}} [[文件:IcoSteel.png|20px|钢铁]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改造|钢材}}|不适用}}
+ ! style="text-align: right" {{!}}解体回收
+ {{!}} colspan="3" style="text-align: center;" {{!}}[[文件:IcoFuel.png|20px|燃料]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|解体|燃料}} [[文件:IcoAmmo.png|20px|弹药]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|解体|弹药}} [[文件:IcoSteel.png|20px|钢铁]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|解体|钢材}} [[文件:IcoBauxite.png|20px|铝]]：{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|解体|铝}}
+ {{!}}-
+ ! style="text-align: right" {{!}}合成提供
+ {{!}} colspan="5" style="text-align: center" {{!}}[[文件:IcoAtkRemodel.png|20px|火力]] + {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改修|火力}} [[文件:IcoTorpedoRemodel.png|20px|雷装]] + {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改修|雷装}}  [[文件:IcoAARemodel.png|20px|对空]] + {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改修|对空}} [[文件:IcoArmorRemodel.png|20px|装甲]] + {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|改修|装甲}} {{#if: {{{运提供|}}} | [[文件:IcoLuck.png|20px|运]] + {{{运提供}}}}}
+ {{!}}-
+ ! style="text-align: right" {{!}}画师
+ {{!}} style="text-align: center" {{!}}{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|画师}} |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|画师}}|不明}}
+ ! style="text-align: right" {{!}}声优
+ {{!}} colspan="3" style="text-align: center" {{!}}{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|声优}} |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|声优}}|不明}}
+ | shinkai  =! style="text-align: right" {{!}}画师
+ {{!}} style="text-align: center" {{!}}{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|画师}} |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|画师}}|不明}}
+ ! style="text-align: right" {{!}}声优
+ {{!}} colspan="3" style="text-align: center" {{!}}{{#if: {{#invoke:舰娘函数|getSpDataById|{{{编号}}}|声优}} |{{#invoke:舰娘函数|getSpDataById|{{{编号}}}|声优}}|不明}}}}
+ |}</onlyinclude>
+*此一览表系统正在测试。如果发现未能正确显示数据，请通过讨论页联系我们。
+*一览表仅包括少量舰船信息，详细信息参见下文或相关文章。
+<noinclude><!--请不要增添文档/分类/维基互联于此-->
+{{Documentation}}
+<!--请到 /doc 子页面增添，谢谢--></noinclude>
