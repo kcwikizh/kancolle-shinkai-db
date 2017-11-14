@@ -207,26 +207,28 @@ p.getEqDataById = p.getEquipById
 
 
 --- Generate wiki text of '深海栖舰装备'
--- @return string: Wiki test
-function p.getEquipsListWiki ()
-    local wikiText = {}
+-- @return string: HTML text
+function p.getEquipsList (frame)
+    local output = {}
 
-    table.insert(wikiText, table.concat({
+    table.insert(output, table.concat({
         '<table style="width: 100%; background-color: #f9f9f9; ',
         'border: 1px #aaaaaa solid; border-collapse: collapse;"><tr>'}))
-    table.insert(wikiText,
+    table.insert(output,
         '<th style="width: 5%; background-color: #e2e2e2;">编号</th>')
-    table.insert(wikiText,
+    table.insert(output,
         '<th style="width: 5%; background-color: #e2e2e2;">等级</th>')
-    table.insert(wikiText,
-        '<th style="width: 15%; background-color: #e2e2e2;">名字</th>')
-    table.insert(wikiText,
+    table.insert(output,
+        '<th style="width: 20%; background-color: #e2e2e2;">名字</th>')
+    table.insert(output,
         '<th style="width: 10%; background-color: #e2e2e2;">类型</th>')
-    table.insert(wikiText,
-        '<th style="width: 20%; background-color: #e2e2e2;">数据</th>')
-    table.insert(wikiText,
+    table.insert(output,
+        '<th style="width: 40%; background-color: #e2e2e2;">数据</th>')
+    table.insert(output,
         '<th style="width: 5%; background-color: #e2e2e2;">射程</th>')
-    table.insert(wikiText, '</tr>')
+    table.insert(output,
+        '<th style="width: 15%; background-color: #e2e2e2;">备注</th>')
+    table.insert(output, '</tr>')
 
     -- Just sort the equip ID
     local equipIdList = {}
@@ -244,49 +246,50 @@ function p.getEquipsListWiki ()
             return
         end
 
-        table.insert(wikiText, '<tr>')
+        table.insert(output, '<tr>')
 
         -- equip ID
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="text-align: center; vertical-align: center; ',
             'background-color: #eaeaea; border-style: solid none; ',
             'border-width: 1px;">', equipId, '</td>'}))
 
         -- rare
-        table.insert(wikiText,table.concat({
+        table.insert(output,table.concat({
             '<td style="text-align: center; vertical-align: center; ',
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
             string.rep('☆', equip['稀有度']),
             '</td>'}))
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="background-color: #eaeaea; border-style: solid none; ',
             'border-width: 1px;">'}))
 
         -- {
         -- name table, include icon, name in ja and zh
-        table.insert(wikiText, '<table><tr>')
+        table.insert(output, '<table><tr>')
         -- icon
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td rowspan="2" style="width: 10%; ',
             'background-color: #cacaca;">',
             equipTypeNameIconTable[equip['类别']].icon or
                 equipTypeNameIconTable[TYPE_UNKNOW_ID].icon,
             '</td>'}))
         -- name
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="background-color: #cacaca;">',
-            string.format('{{lang|ja|%s}}', equip['日文名']),
+            frame:expandTemplate({
+                title = "lang", args = {"ja", equip['日文名']}}),
             '</tr>'}))
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<tr><td style="background-color: #eaeaea;">',
             equip['中文名'], '</td></tr>'}))
-        table.insert(wikiText, '</table></td>')
+        table.insert(output, '</table></td>')
         -- end of name table, include icon, name in ja and zh
         -- }
 
         -- type
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="text-align: center; vertical-align: center; ',
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
@@ -296,7 +299,7 @@ function p.getEquipsListWiki ()
 
         -- {
         -- type stat/attribute
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="text-align: left; vertical-align: center; ',
             'background-color: #eaeaea; border-style: solid none; ',
             'border-width: 1px;">'}))
@@ -315,29 +318,37 @@ function p.getEquipsListWiki ()
                         attrValue = tostring(attrValue)
                     end
                 end
-                table.insert(wikiText, table.concat({
+                table.insert(output, table.concat({
                     equipAttrIconTable[attrName], attrName, '&nbsp;',
                     attrValue, '&nbsp;'}))
             end
         end
-        table.insert(wikiText, '</td>')
+        table.insert(output, '</td>')
         -- end of type stat/attribute
         --}
 
         -- range/leng
         local range = equip['属性']['射程']
-        table.insert(wikiText, table.concat({
+        table.insert(output, table.concat({
             '<td style="text-align: center; vertical-align: center; ',
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
             range or '无',
             '</td>'}))
 
-        table.insert(wikiText, '</tr>')
-    end
-    table.insert(wikiText, '</table>')
+        -- remarks
+        table.insert(output, table.concat({
+            '<td style="text-align: left; vertical-align: center; ',
+            'background-color: #eaeaea; border-style: solid none; ',
+            'border-width: 1px;">',
+            equip['备注'] or '',
+            '</td>'}))
 
-    return(table.concat(wikiText))
+        table.insert(output, '</tr>')
+    end
+    table.insert(output, '</table>')
+
+    return(table.concat(output))
 end
 
 return p
