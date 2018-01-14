@@ -64,16 +64,16 @@ function doEquipsGetDataTest ()
     end
 end
 
-function doEquipsGetEquipsListWiki ()
+function doEquipsGetEquipsList ()
     print('write equips wiki to equips_wiki.xhtml')
     local f = assert(io.open('equips_wiki.xhtml', 'w'))
-    f:write(equips_method.getEquipsListWiki())
+    f:write(equips_method.getEquipsList())
     f:close()
 end
 
 function doEquipsMethodTest ()
     doEquipsGetDataTest()
-    doEquipsGetEquipsListWiki()
+    -- doEquipsGetEquipsList()
 end
 
 

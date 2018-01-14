@@ -76,3 +76,5 @@
 {"id": 576, "kcwiki_id": 576, "no": 3, "name": {"ja_jp": "深海12inch三連装砲", "zh_cn": "深海12英寸三连装炮"}, "type": 3, "rare": 4, "attr": {"fire": 16, "aa": 3, "armor": 2, "accuracy": 9, "evasion": 2, "range": 3}}
 {"id": 577, "kcwiki_id": 577, "no": 3, "name": {"ja_jp": "深海15inch四連装砲", "zh_cn": "深海15英寸四连装炮"}, "type": 3, "rare": 5, "attr": {"fire": 24, "aa": 4, "armor": 2, "accuracy": 8, "evasion": 1, "range": 3}}
 {"id": 578, "kcwiki_id": 578, "no": 16, "name": {"ja_jp": "深海15inch連装砲後期型", "zh_cn": "深海15英寸连装炮后期型"}, "type": 3, "rare": 5, "attr": {"fire": 19, "aa": 8, "armor": 1, "accuracy": 10, "evasion": 2, "range": 3}}
+{"id": 579, "kcwiki_id": 579, "no": 1, "name": {"ja_jp": "深海14inch海峡連装砲", "zh_cn": "深海14英寸海峡连装炮"}, "type": 3, "rare": 5, "attr": {"fire": 17, "aa": 4, "armor": 0, "accuracy": 13, "evasion": 3, "range": 3}}
+{"id": 580, "kcwiki_id": 580, "no": 5, "name": {"ja_jp": "深海待伏魚雷", "zh_cn": "深海待伏鱼雷"}, "type": 22, "rare": 4, "attr": {"fire": 0, "aa": 0, "armor": 0, "accuracy": 9, "evasion": 0, "range": 1}}
