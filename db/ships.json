@@ -8346,8 +8346,8 @@
             }
         ]
     },
-    "1914": {
-        "id": 1914,
+    "1714": {
+        "id": 1714,
         "name": {
             "ja_jp": "空母ヲ級改",
             "zh_cn": "空母WO级改",
@@ -8367,7 +8367,7 @@
             "leng": 0
         },
         "equips": [
-            98,
+            556,
             561,
             561,
             561
@@ -8380,8 +8380,8 @@
         ],
         "maxeq": 0
     },
-    "1915": {
-        "id": 1915,
+    "1715": {
+        "id": 1715,
         "name": {
             "ja_jp": "空母ヲ級改",
             "zh_cn": "空母WO级改",
@@ -8401,7 +8401,7 @@
             "leng": 0
         },
         "equips": [
-            98,
+            556,
             562,
             562,
             562
@@ -9434,9 +9434,9 @@
         "id": 1736,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新棲姫",
+            "zh_cn": "潜水新栖姫",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新棲姫flagship"
+            "fullname_zh_cn": "潜水新栖姫flagship"
         },
         "yomi": "flagship",
         "stats": {
@@ -9490,9 +9490,9 @@
         "id": 1737,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新棲姫",
+            "zh_cn": "潜水新栖姫",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新棲姫flagship"
+            "fullname_zh_cn": "潜水新栖姫flagship"
         },
         "yomi": "flagship",
         "stats": {
@@ -9546,9 +9546,9 @@
         "id": 1738,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新棲姫",
+            "zh_cn": "潜水新栖姫",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新棲姫flagship"
+            "fullname_zh_cn": "潜水新栖姫flagship"
         },
         "yomi": "flagship",
         "stats": {
