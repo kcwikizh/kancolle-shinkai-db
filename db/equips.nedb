@@ -12,7 +12,7 @@
 {"id": 512, "kcwiki_id": 512, "no": 4, "name": {"ja_jp": "12.5inch連装副砲", "zh_cn": "12.5英寸连装副炮"}, "type": 4, "rare": 2, "attr": {"fire": 7, "aa": 3, "range": 2}}
 {"id": 513, "kcwiki_id": 513, "no": 5, "name": {"ja_jp": "21inch魚雷前期型", "zh_cn": "21英寸鱼雷前期型"}, "type": 5, "rare": 1, "attr": {"torpedo": 2, "range": 1}}
 {"id": 514, "kcwiki_id": 514, "no": 5, "name": {"ja_jp": "21inch魚雷後期型", "zh_cn": "21英寸鱼雷后期型"}, "type": 5, "rare": 1, "attr": {"torpedo": 5, "range": 1}}
-{"id": 515, "kcwiki_id": 515, "no": 5, "name": {"ja_jp": "高速深海魚雷/22inch魚雷後期型", "zh_cn": "高速深海鱼雷/22英寸鱼雷后期型"}, "type": 5, "rare": 2, "attr": {"torpedo": 10, "range": 1}}
+{"id": 515, "kcwiki_id": 515, "no": 5, "name": {"ja_jp": "22inch魚雷後期型", "zh_cn": "22英寸鱼雷后期型"}, "type": 5, "rare": 2, "attr": {"torpedo": 10, "range": 1}}
 {"id": 516, "kcwiki_id": 516, "no": 8, "name": {"ja_jp": "深海棲艦攻", "zh_cn": "深海栖舰攻"}, "type": 8, "rare": 1, "attr": {"torpedo": 4, "asw": 2, "los": 5, "range": 0}}
 {"id": 517, "kcwiki_id": 517, "no": 8, "name": {"ja_jp": "深海棲艦攻 Mark.II", "zh_cn": "深海栖舰攻 Mark.II"}, "type": 8, "rare": 2, "attr": {"torpedo": 6, "asw": 4, "los": 5, "range": 0}}
 {"id": 518, "kcwiki_id": 518, "no": 8, "name": {"ja_jp": "深海棲艦攻 Mark.III", "zh_cn": "深海栖舰攻 Mark.III"}, "type": 8, "rare": 3, "attr": {"torpedo": 11, "aa": 4, "asw": 7, "los": 5, "range": 0}}
