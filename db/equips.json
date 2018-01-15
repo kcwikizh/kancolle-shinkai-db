@@ -1328,7 +1328,6 @@
         "attr": {
             "fire": 17,
             "aa": 4,
-            "armor": 0,
             "accuracy": 13,
             "evasion": 3,
             "range": 3
@@ -1345,11 +1344,8 @@
         "type": 22,
         "rare": 4,
         "attr": {
-            "fire": 0,
-            "aa": 0,
-            "armor": 0,
+            "torpedo": 19,
             "accuracy": 9,
-            "evasion": 0,
             "range": 1
         }
     }
