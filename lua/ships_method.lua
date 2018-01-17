@@ -10,7 +10,7 @@ if mw then
     equips = require('模块:深海装备数据')
 else
     ships = require('ships')
-    equips = require('equips')
+    equips = require('equips2')
 end
 local shipDataTable = ships.shipDataTable
 local equipDataTable = equips.equipDataTable

@@ -79,13 +79,13 @@ function doEquipsGetEquipsList ()
 end
 
 function doEquipsMethodTest ()
-    -- doEquipsGetDataTest()
+    doEquipsGetDataTest()
     doEquipsGetEquipsList()
 end
 
 
 function main ()
-    -- doShipsMethodTest()
+    doShipsMethodTest()
     doEquipsMethodTest()
 end
 

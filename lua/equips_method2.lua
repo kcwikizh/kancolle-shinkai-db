@@ -93,7 +93,7 @@ local equipCategoryNameIconTable = {
         icon = '[[文件:IcoEngine.png|35px|机关]]'
     },
     [18] = {
-        name = '対空散弾',
+        name = '对空散弾',
         icon = '[[文件:IcoAAShell.png|35px|对空弹]]'
     },
     [19] = {
