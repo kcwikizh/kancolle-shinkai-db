@@ -1,15 +1,17 @@
-'''Utils
-'''
+"""Utils
+"""
 import json
 
-__all__ = ['MyException', 'nedb_parser']
+__all__ = ['MyException', 'nedb_parser', 'python_data_to_lua_table']
+LUA_INDENT = ' ' * 4
+
 
 class MyException(Exception):
-    '''My Exception
+    """My Exception
 
     I don't want to check the return value of every function when error occurs.
     Raise an exception, just easier to programming.
-    '''
+    """
     def __init__(self, msg):
         super().__init__(msg)
         self.message = msg
@@ -19,8 +21,8 @@ class MyException(Exception):
 
 
 def nedb_parser(nedb):
-    '''nedb_parser
-    '''
+    """nedb_parser
+    """
     result = {}
     line_num = 1
 
@@ -37,3 +39,49 @@ def nedb_parser(nedb):
 
     print('Loaded {} datas from {}'.format(len(result), nedb))
     return result
+
+
+def python_data_to_lua_table(data, level=0, indent=LUA_INDENT):
+    """Generate Lua table using python
+
+    'data' must be a dictionary or list when first invoke.
+    """
+    lines = []
+    if isinstance(data, list):
+        for i in data:
+            if isinstance(i, dict):
+                lines.append(level*indent + '{\n'
+                             + python_data_to_lua_table(i, level+1, indent)
+                             + '\n' + level*indent + '}')
+            elif isinstance(i, list):
+                lines.append(level*indent + '{\n'
+                             + python_data_to_lua_table(i, level+1, indent)
+                             + '\n' + level*indent + '}')
+            elif isinstance(i, int):
+                lines.append(level*indent + str(i))
+            elif isinstance(i, str):
+                lines.append(level*indent + '"{}"'.format(i))
+            else:
+                raise MyException('Unsupported data {} with type: {}'.format(str(i), type(i)))
+    elif isinstance(data, dict):
+        for i in data:
+            if isinstance(data[i], dict):
+                lines.append(level*indent
+                             + '["{}"] = {{\n'.format(i)
+                             + python_data_to_lua_table(data[i], level+1, indent)
+                             + '\n' + level*indent + '}')
+            elif isinstance(data[i], list):
+                lines.append(level*indent
+                             + '["{}"] = {{\n'.format(i)
+                             + python_data_to_lua_table(data[i], level+1, indent)
+                             + '\n' + level*indent + '}')
+            elif isinstance(data[i], int):
+                lines.append(level*indent + '["{}"] = {}'.format(i, data[i]))
+            elif isinstance(data[i], str):
+                lines.append(level*indent + '["{}"] = "{}"'.format(i, data[i]))
+            else:
+                raise MyException('Unsupported data\n{}\nwith type: {}'.format(str(data[i]), type(data[i])))
+    else:
+        raise MyException('Unsupported data\n{}\nwith type: {}'.format(str(data), type(data)))
+
+    return ',\n'.join(lines)

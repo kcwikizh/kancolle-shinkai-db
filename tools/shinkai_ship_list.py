@@ -1,4 +1,4 @@
-'''get item of single item of shinkai ship list'''
+"""get item of single item of shinkai ship list"""
 from utils import nedb_parser
 
 NEDB_SHIPS = '../db/ships.nedb'
@@ -6,11 +6,12 @@ NEDB_EQUIPS = '../db/equips.nedb'
 
 MAX_SLOT_NUM = 5
 
-def gen_ship_item(wikiid, nedb_ships, nedb_equips):
-    '''Generate one single item'''
-    ship = nedb_ships.get(int(wikiid), None)
+
+def gen_ship_item(wiki_id, nedb_ships, nedb_equips):
+    """Generate one single item"""
+    ship = nedb_ships.get(int(wiki_id), None)
     if not ship:
-        return 'invalid ship id: {}'.format(wikiid)
+        return 'invalid ship id: {}'.format(wiki_id)
     ship['stats']['leng'] = ['', '短', '中', '长', '超长'][ship['stats']['leng']]
 
     output = '{{深海栖姬单条列表\n'
@@ -33,12 +34,12 @@ def gen_ship_item(wikiid, nedb_ships, nedb_equips):
     output += tmp + '\n'
 
     tmp = ' '
-    for slotid, (equipid, slot) in enumerate(
+    for slot_id, (equip_id, slot) in enumerate(
             zip(ship['equips'], ship['slots']),
             start=1):
-        tmp += '|装备{}={}'.format(slotid, nedb_equips[equipid]['name']['zh_cn'])
+        tmp += '|装备{}={}'.format(slot_id, nedb_equips[equip_id]['name']['zh_cn'])
         if slot > 0:
-            tmp += '|搭载{}={}'.format(slotid, slot)
+            tmp += '|搭载{}={}'.format(slot_id, slot)
 
     for i in range(len(ship['slots']) + 1, MAX_SLOT_NUM + 1):
         tmp += '|装备{}='.format(i)
@@ -50,7 +51,7 @@ def gen_ship_item(wikiid, nedb_ships, nedb_equips):
 
 
 def main():
-    '''Main process'''
+    """Main process"""
     nedb_ships = nedb_parser(NEDB_SHIPS)
     nedb_equips = nedb_parser(NEDB_EQUIPS)
     while True:
@@ -58,6 +59,7 @@ def main():
             print(gen_ship_item(input(), nedb_ships, nedb_equips))
         except EOFError:
             break
+
 
 if __name__ == '__main__':
     main()
