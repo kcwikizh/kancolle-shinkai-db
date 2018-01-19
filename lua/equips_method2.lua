@@ -27,99 +27,80 @@ local attrDisplaySequence = {
     '火力', '雷装', '爆装', '对空', '装甲', '对潜', '命中', '索敌', '回避'
 }
 local TYPE_UNKNOW_ID = 99
-local equipCategoryNameIconTable = {
-    [1] = {
-        name = '小口径主炮',
-        icon = '[[文件:IcoMainLight.png|35px|小口径主炮]]'
-    },
-    [2] = {
-        name = '中口径主炮',
-        icon = '[[文件:IcoMainMedium.png|35px|中口径主炮]]'
-    },
-    [3] = {
-        name = '大口径主炮',
-        icon = '[[文件:IcoMainHeavy.png|35px|大口径主炮]]'
-    },
-    [4] = {
-        name =  '副炮',
-        icon = '[[文件:IcoSub.png|35px|副炮]]'
-    },
-    [5] = {
-        name = '鱼雷',
-        icon = '[[文件:IcoTorpedoEquip.png|35px|鱼雷]]'
-    },
-    [6] = {
-        name = '舰上战斗机',
-        icon = '[[文件:IcoCarrierFighter.png|35px|舰战机]]'
-    },
-    [7] = {
-        name = '舰上爆击机',
-        icon = '[[文件:IcoCarrierBomber.png|35px|舰爆机]]'
-    },
-    [8] = {
-        name = '舰上攻击机',
-        icon = '[[文件:IcoCarrierTorpedo.png|35px|舰攻机]]',
-    },
-    [9] = {
-        name = '舰上侦察机',
-        icon = '[[文件:IcoCarrierRecon.png|35px|舰侦机]]'
-    },
-    [10] = {
-        name = '水上侦察机',
-        icon = '[[文件:IcoSeaplane.png|35px|水侦机]]'
-    },
-    [11] = {
-        name = '水上爆击机',
-        icon = '[[文件:IcoSeaplane.png|35px|水侦机]]'
-    },
-    [12] = {
-        name = '小型电探',
-        icon = '[[文件:IcoRadar.png|35px|电探]]'
-    },
-    [13] = {
-        name = '大型电探',
-        icon = '[[文件:IcoRadar.png|35px|电探]]'
-    },
-    [14] = {
-        name = '声呐',
-        icon = '[[文件:IcoASWSonar.png|35px|声呐]]'
-    },
-    [15] = {
-        name = '爆雷',
-        icon = '[[文件:IcoDepth.png|35px|爆雷]]'
-    },
-    [17] = {
-        name = '机关部强化',
-        icon = '[[文件:IcoEngine.png|35px|机关]]'
-    },
-    [18] = {
-        name = '对空散弾',
-        icon = '[[文件:IcoAAShell.png|35px|对空弹]]'
-    },
-    [19] = {
-        name = '对舰强化弹',
-        icon = '[[文件:IcoShell.png|35px|对舰弹]]'
-    },
-    [21] = {
-        name = '对空机铳',
-        icon = '[[文件:IcoAAGun.png|35px|机枪]]'
-    },
-    [22] = {
-        name = '特殊潜航艇',
-        icon = '[[文件:IcoTorpedoEquip.png|35px|鱼雷]]'
-    },
-    [29] = {
-        name = '探照灯',
-        icon = '[[文件:IcoSearchlight.png|35px|探照灯]]'
-    },
-    [41] = {
-        name = '大型飞行艇',
-        icon = '[[文件:IcoRecon.png|35px|水上飞行艇]]'
-    },
-    [TYPE_UNKNOW_ID] = {
-        name = '未知',
-        icon = '[[文件:IcoNone.png|35px|暂无]]'
-    }
+local equipCategoryTable = {
+    [1] = '小口径主炮',
+    [2] = '中口径主炮',
+    [3] = '大口径主炮',
+    [4] = '副炮',
+    [5] = '鱼雷',
+    [6] = '舰上战斗机',
+    [7] = '舰上爆击机',
+    [8] = '舰上攻击机',
+    [9] = '舰上侦察机',
+    [10] = '水上侦察机',
+    [11] = '水上爆击机',
+    [12] = '小型电探',
+    [13] = '大型电探',
+    [14] = '声呐',
+    [15] = '爆雷',
+    [17] = '机关部强化',
+    [18] = '对空散弾',
+    [19] = '对舰强化弹',
+    [21] = '对空机铳',
+    [22] = '特殊潜航艇',
+    [29] = '探照灯',
+    [41] = '大型飞行艇',
+    [TYPE_UNKNOW_ID] = '未知',
+}
+local equipIconTable = {
+    [1]="[[文件:IcoMainLight.png|35px|小口径主炮]]",
+	[2]="[[文件:IcoMainMedium.png|35px|中口径主炮]]",
+	[3]="[[文件:IcoMainHeavy.png|35px|大口径主炮]]",
+	[4]="[[文件:IcoSub.png|35px|副炮]]",
+	[5]="[[文件:IcoTorpedoEquip.png|35px|鱼雷]]",
+	[6]="[[文件:IcoCarrierFighter.png|35px|舰战机]]",
+	[7]="[[文件:IcoCarrierBomber.png|35px|舰爆机]]",
+	[8]="[[文件:IcoCarrierTorpedo.png|35px|舰攻机]]",
+	[9]="[[文件:IcoCarrierRecon.png|35px|舰侦机]]",
+	[10]="[[文件:IcoSeaplane.png|35px|水侦机]]",
+	[11]="[[文件:IcoRadar.png|35px|电探]]",
+	[12]="[[文件:IcoAAShell.png|35px|对空弹]]",
+	[13]="[[文件:IcoShell.png|35px|对舰弹]]",
+	[14]="[[文件:IcoDamecon.png|35px|应急修理要员]]",
+	[15]="[[文件:IcoAAGun.png|35px|机枪]]",
+	[16]="[[文件:IcoMainAA.png|35px|对空主炮]]",
+	[17]="[[文件:IcoDepth.png|35px|爆雷]]",
+	[18]="[[文件:IcoASWSonar.png|35px|声呐]]",
+	[19]="[[文件:IcoEngine.png|35px|机关]]",
+	[20]="[[文件:IcoLanding.png|35px|上陆用舟艇]]",
+	[21]="[[文件:IcoAutogyro.png|35px|旋翼机]]",
+	[22]="[[文件:IcoAirAS.png|35px|对潜哨戒机]]",
+	[23]="[[文件:IcoBulge.png|35px|增设装甲]]",
+	[24]="[[文件:IcoSearchlight.png|35px|探照灯]]",
+	[25]="[[文件:IcoSupply.png|35px|输送部材]]",
+	[26]="[[文件:IcoFacility.png|35px|舰艇修理设施]]",
+	[27]="[[文件:IcoFlare.png|35px|照明弹]]",
+	[28]="[[文件:IcoFleetCom.png|35px|舰队司令部设施]]",
+	[29]="[[文件:IcoAviation.png|35px|航空要员]]",
+	[30]="[[文件:IcoAAFD.png|35px|高射装置]]",
+	[31]="[[文件:IcoAG.png|35px|对地弹]]",
+	[32]="[[文件:IcoPersonnel.png|35px|水上舰要员]]",
+	[33]="[[文件:IcoRecon.png|35px|水上飞行艇]]",
+	[34]="[[文件:IcoRations.png|35px|战斗粮食]]",
+	[35]="[[文件:IcoSupplies.png|35px|洋上补给]]",
+	[36]="[[文件:IcoLandingCraft.png|35px|特型内火艇]]",
+	[37]="[[文件:IcoLand-basedAttackAircraft.png|35px|陆上攻击机]]",
+	[38]="[[文件:IcoInterceptorFighter.png|35px|局地战斗机]]",
+	[39]="[[文件:Ico39JetPoweredFighterBomber.png|35px|喷气式战斗轰炸机]]",
+	[40]="[[文件:Ico40JetPoweredFighterBomber.png|35px|喷气式战斗轰炸机]]",
+	[41]="[[文件:Icon41TransportationMaterial.png|35px|输送部材]]",
+	[42]="[[文件:Icon42SubmarineRadar.png|35px|潜水艇装备]]",
+	[43]="[[文件:IconSeaplaneFighter.png|35px|水战机]]",
+	[44]="[[文件:InterceptorFighterIcon2.png|35px|陆军战斗机]]",
+	[45]="[[文件:IconNightFighter.png|37px|夜间舰战机]]",
+	[46]="[[文件:IconNightTorpedo.png|42px|夜间舰攻机]]",
+	[47]="[[文件:IconAntiSubmarine.png|36px|对潜哨戒机]]",
+    [TYPE_UNKNOW_ID] = '[[文件:IcoNone.png|35px|暂无]]',
 }
 local equipAttrIconTable = {
     ["火力"] = "[[文件:IcoAtk.png|20px|火力]]",
@@ -159,7 +140,7 @@ local function getDataDirectly (equip, args)
         -- Skip args[1] because it's equip ID.
         if i > 1 then
             if type(var) ~= 'table' then
-                return fale, errMsg(string.format('参数个数过多: %s',
+                return false, errMsg(string.format('参数个数过多: %s',
                     table.concat(args, '|')))
             end
             var = var[v]
@@ -250,10 +231,10 @@ function p.getEquipsList (frame)
 
     for _, equipId in ipairs(equipIdList) do
         local equip = equipDataTable[equipId]
-        local equip_category = equip['类型'][CATEGORY]
-        local equip_icon_id = equip['类型'][ICON_ID]
-        local categoryEntry = equipCategoryNameIconTable[equip_category] or
-            equipCategoryNameIconTable[TYPE_UNKNOW_ID]
+        local equipCategory = equipCategoryTable[equip['类型'][CATEGORY]] or
+                equipCategoryTable[TYPE_UNKNOW_ID]
+        local equipIcon = equipIconTable[equip['类型'][ICON_ID]] or
+                equipIconTable[TYPE_UNKNOW_ID]
 
         table.insert(output, '<tr>')
 
@@ -281,7 +262,7 @@ function p.getEquipsList (frame)
         table.insert(output, table.concat({
             '<td rowspan="2" style="width: 10%; ',
             'background-color: #cacaca;">',
-            categoryEntry.icon,
+            equipIcon,
             '</td>'}))
         -- name
         table.insert(output, table.concat({
@@ -301,7 +282,7 @@ function p.getEquipsList (frame)
             '<td style="text-align: center; vertical-align: center; ',
             'background-color: #f2f2f2; border-style: solid none; ',
             'border-width: 1px;">',
-            categoryEntry.name,
+            equipCategory,
             '</td>'}))
 
         -- {
@@ -355,7 +336,7 @@ function p.getEquipsList (frame)
     end
     table.insert(output, '</table>')
 
-    return(table.concat(output))
+    return table.concat(output)
 end
 
 return p
