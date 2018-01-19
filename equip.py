@@ -1,6 +1,6 @@
 """Analysis the start2 data"""
+__all__ = ['main']
 import json
-import sys
 from collections import OrderedDict
 from urllib.request import urlopen
 
@@ -13,6 +13,7 @@ JA_ZH_JSON = 'data/ja_zh.json'
 SINKAI_EQUIP_ID_BASE = 501
 EQUIPS_LUA = 'lua/equips2.lua'
 EQUIPS_JSON = 'json/equips2.json'
+EQUIPS_HR_JSON = 'json/equips2_human_readable.json'
 
 
 def shinkai_parse_equip(start2):
@@ -27,13 +28,11 @@ def shinkai_parse_equip(start2):
     for equip in equips:
         equip_dict = OrderedDict({})
         equip_dict['日文名'] = equip['api_name']
-        try:
-            equip_dict['中文名'] = ja_zh_table[equip['api_name']]
-        except KeyError:
+        equip_dict['中文名'] = ja_zh_table.get(equip['api_name'], '')
+        if not equip_dict['中文名']:
             print('[{}] {} not found in file {}, ignore'.format(equip['api_id'],
                                                                 equip['api_name'],
-                                                                JA_ZH_JSON),
-                  file=sys.stderr)
+                                                                JA_ZH_JSON))
         # api_type = [大分類, 図鑑表示, カテゴリ, アイコンID, 航空機カテゴリ]
         # equip_dict['类别'] = equip['api_type'][2]
         # equip_dict['图鉴'] = equip['api_type'][3]
@@ -65,8 +64,21 @@ def shinkai_generate_equip_json(start2):
     """
     equips = [i for i in start2['api_mst_slotitem']
               if i['api_id'] >= SINKAI_EQUIP_ID_BASE]
+
+    # Add zh-CN name
+    with open(JA_ZH_JSON, 'r', encoding='utf-8') as json_fp:
+        ja_zh_table = json.load(json_fp)
+    for equip in equips:
+        equip['api_zh_cn_name'] = ja_zh_table.get(equip['api_name'], '')
+        if not equip['api_zh_cn_name']:
+            print('[{}] {} not found in file {}'.format(equip['api_id'],
+                                                        equip['api_name'],
+                                                        JA_ZH_JSON))
+
     with open(EQUIPS_JSON, 'w', encoding='utf8') as json_fp:
-        json.dump(equips, json_fp, indent='    ')
+        json.dump(equips, json_fp)
+    with open(EQUIPS_HR_JSON, 'w', encoding='utf8') as json_fp:
+        json.dump(equips, json_fp, ensure_ascii=False, indent='    ')
 
 
 def shinkai_generate_equip_lua(start2):
@@ -96,6 +108,7 @@ def main():
     start2 = utils_load_start2_json(START2_JSON)
 
     while True:
+        print('== Equip ==')
         print('[1] Generate Shinkai equipment Lua table\n'
               + '[2] Generate Shinkai equipment Json\n'
               + '\n[0] Exit')
@@ -111,7 +124,7 @@ def main():
             shinkai_generate_equip_json(start2)
             print('Done')
         else:
-            print('Unknown choise: {}'.format(choice))
+            print('Unknown choice: {}'.format(choice))
 
 
 if __name__ == '__main__':
