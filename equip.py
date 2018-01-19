@@ -30,9 +30,9 @@ def shinkai_parse_equip(start2):
         equip_dict['日文名'] = equip['api_name']
         equip_dict['中文名'] = ja_zh_table.get(equip['api_name'], '')
         if not equip_dict['中文名']:
-            print('[{}] {} not found in file {}, ignore'.format(equip['api_id'],
-                                                                equip['api_name'],
-                                                                JA_ZH_JSON))
+            print('[{}] {} not found in file {}'.format(equip['api_id'],
+                                                        equip['api_name'],
+                                                        JA_ZH_JSON))
         # api_type = [大分類, 図鑑表示, カテゴリ, アイコンID, 航空機カテゴリ]
         # equip_dict['类别'] = equip['api_type'][2]
         # equip_dict['图鉴'] = equip['api_type'][3]
@@ -50,7 +50,8 @@ def shinkai_parse_equip(start2):
                 ('回避', 'api_houk')]:
             if equip[api_name] > 0:
                 equip_dict[lua_variable_name] = equip[api_name]
-        equip_dict['射程'] = ['无', '短', '中', '长', '超长', '超超长'][equip['api_leng']]
+        equip_dict['射程'] = [
+            '无', '短', '中', '长', '超长', '超超长'][equip['api_leng']]
 
         equips_dict[str(equip['api_id'])] = equip_dict
 
@@ -87,17 +88,20 @@ def shinkai_generate_equip_lua(start2):
     with open(EQUIPS_LUA, 'w', encoding='utf8') as lua_fp:
         lua_fp.write('local d = {}\n\n'
                      + 'd.equipDataTable = {\n')
-        lua_fp.write(python_data_to_lua_table(equips_dict, level=1))
+        data, _ = python_data_to_lua_table(equips_dict, level=1)
+        lua_fp.write(data)
         lua_fp.write('\n}\n\nreturn d\n')
 
 
 def utils_load_start2_json(json_file):
     """Load and decode start2.json"""
+    '''
     print('Download start2 original file to {}'.format(START2_JSON))
     with urlopen(url=START2_URL, timeout=TIMEOUT_IN_SECOND) as url_fp:
         data = url_fp.read().decode('utf8')
     with open(START2_JSON, 'w', encoding='utf8') as json_fp:
         json_fp.write(data)
+    '''
     with open(json_file, 'r') as file:
         start2 = json.load(file)
     return start2
