@@ -95,13 +95,11 @@ def shinkai_generate_equip_lua(start2):
 
 def utils_load_start2_json(json_file):
     """Load and decode start2.json"""
-    '''
     print('Download start2 original file to {}'.format(START2_JSON))
     with urlopen(url=START2_URL, timeout=TIMEOUT_IN_SECOND) as url_fp:
         data = url_fp.read().decode('utf8')
     with open(START2_JSON, 'w', encoding='utf8') as json_fp:
         json_fp.write(data)
-    '''
     with open(json_file, 'r') as file:
         start2 = json.load(file)
     return start2
