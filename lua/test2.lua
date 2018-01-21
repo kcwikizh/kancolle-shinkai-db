@@ -58,6 +58,8 @@ function doEquipsGetDataTest ()
         {'507', '类型'},
         {'507', '类别'},
         {'507', '图鉴'},
+        {'579', '类别'},
+        {'579', '图鉴'},
     }
 
     for _, v in ipairs(testArgsList) do

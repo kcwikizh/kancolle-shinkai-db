@@ -115,6 +115,15 @@ local equipAttrIconTable = {
 }
 local CATEGORY = 3
 local ICON_ID = 4
+local spicialCaseHandlers = {
+    ['579'] = function (equip)
+        -- Fix icon id of 深海14英寸海峡连装炮
+        --
+        -- original value in start2 is: 1 小口径主炮
+        -- fix it to: 3 大口径主炮
+        equip['类型'][ICON_ID] = 3
+    end
+}
 
 
 --- Return error massage with span style HTML label
@@ -172,10 +181,11 @@ function p.getEquipDataById (frame)
     for _, v in ipairs(frame.args) do
         table.insert(args, v)
     end
-    local equip = equipDataTable[args[1]]
+    local equipId = args[1]
+    local equip = equipDataTable[equipId]
 
     if equip == nil then
-        return errMsg(string.format('equip ID不存在: %s', args[1]))
+        return errMsg(string.format('equip ID不存在: %s', equipId))
     end
 
     -- api_type = [大分類, 図鑑表示, カテゴリ, アイコンID, 航空機カテゴリ]
@@ -184,6 +194,11 @@ function p.getEquipDataById (frame)
     if args[2] == '类别' then
         return equip['类型'][CATEGORY]
     elseif args[2] == '图鉴' then
+        -- hanlder the special case firstly
+        local handler = spicialCaseHandlers[equipId]
+        if handler then
+            handler(equip)
+        end
         return equip['类型'][ICON_ID]
     end
 
@@ -231,6 +246,13 @@ function p.getEquipsList (frame)
 
     for _, equipId in ipairs(equipIdList) do
         local equip = equipDataTable[equipId]
+
+        -- hanlder the special case firstly
+        local handler = spicialCaseHandlers[equipId]
+        if handler then
+            handler(equip)
+        end
+
         local equipCategory = equipCategoryTable[equip['类型'][CATEGORY]] or
                 equipCategoryTable[TYPE_UNKNOW_ID]
         local equipIcon = equipIconTable[equip['类型'][ICON_ID]] or
