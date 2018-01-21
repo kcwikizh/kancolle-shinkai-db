@@ -105,7 +105,7 @@ def python_data_to_lua_table(data, level=0, indent=LUA_INDENT):
                 lines.append(level*indent + '["{}"] = "{}"'.format(i, data[i]))
             else:
                 raise MyException('Unsupported data\n' + str(data[i]) + '\n'
-                                  + 'with type:' + type(data[i]))
+                                  + 'with type:' + str(type(data[i])))
         return ',\n'.join(lines), False
     else:
         raise MyException('Unsupported data\n' + str(data) + '\n'
