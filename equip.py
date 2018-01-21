@@ -1,4 +1,4 @@
-"""Analysis the start2 data"""
+"""Analysis the start2 equipments data"""
 __all__ = ['main']
 import json
 from collections import OrderedDict
@@ -16,17 +16,17 @@ EQUIPS_JSON = 'json/equips2.json'
 EQUIPS_HR_JSON = 'json/equips2_human_readable.json'
 
 
-def shinkai_parse_equip(start2):
+def shinkai_parse_equips(start2):
     """Get shinkai equipments stored by python OrderedDict"""
     equips = [i for i in start2['api_mst_slotitem']
               if i['api_id'] >= SINKAI_EQUIP_ID_BASE]
-    equips_dict = OrderedDict({})
+    equips_dict = OrderedDict()
 
     with open(JA_ZH_JSON, 'r', encoding='utf-8') as json_fp:
         ja_zh_table = json.load(json_fp)
 
     for equip in equips:
-        equip_dict = OrderedDict({})
+        equip_dict = OrderedDict()
         equip_dict['日文名'] = equip['api_name']
         equip_dict['中文名'] = ja_zh_table.get(equip['api_name'], '')
         if not equip_dict['中文名']:
@@ -58,11 +58,8 @@ def shinkai_parse_equip(start2):
     return equips_dict
 
 
-def shinkai_generate_equip_json(start2):
-    """Generate shinkai equipment json
-
-    parameter: ensure_ascii works as it in json.dump
-    """
+def shinkai_generate_equips_json(start2):
+    """Generate shinkai equipment json"""
     equips = [i for i in start2['api_mst_slotitem']
               if i['api_id'] >= SINKAI_EQUIP_ID_BASE]
 
@@ -82,32 +79,32 @@ def shinkai_generate_equip_json(start2):
         json.dump(equips, json_fp, ensure_ascii=False, indent='    ')
 
 
-def shinkai_generate_equip_lua(start2):
+def shinkai_generate_equips_lua(start2):
     """Generate KcWiki shinkai equipment Lua table"""
-    equips_dict = shinkai_parse_equip(start2)
+    equips_dict = shinkai_parse_equips(start2)
+    data, _ = python_data_to_lua_table(equips_dict, level=1)
     with open(EQUIPS_LUA, 'w', encoding='utf8') as lua_fp:
         lua_fp.write('local d = {}\n\n'
                      + 'd.equipDataTable = {\n')
-        data, _ = python_data_to_lua_table(equips_dict, level=1)
         lua_fp.write(data)
         lua_fp.write('\n}\n\nreturn d\n')
 
 
-def utils_load_start2_json(json_file):
+def load_start2_json(json_file):
     """Load and decode start2.json"""
     print('Download start2 original file to {}'.format(START2_JSON))
     with urlopen(url=START2_URL, timeout=TIMEOUT_IN_SECOND) as url_fp:
         data = url_fp.read().decode('utf8')
-    with open(START2_JSON, 'w', encoding='utf8') as json_fp:
+    with open(json_file, 'w', encoding='utf8') as json_fp:
         json_fp.write(data)
-    with open(json_file, 'r') as file:
+    with open(json_file, 'r', encoding='utf8') as file:
         start2 = json.load(file)
     return start2
 
 
 def main():
     """Main process"""
-    start2 = utils_load_start2_json(START2_JSON)
+    start2 = load_start2_json(START2_JSON)
 
     while True:
         print('== Equip ==')
@@ -119,11 +116,11 @@ def main():
             break
         elif choice == '1':
             print('Generate Shinkai equipments Lua table')
-            shinkai_generate_equip_lua(start2)
+            shinkai_generate_equips_lua(start2)
             print('Done')
         elif choice == '2':
             print('Generate Shinkai equipment Json')
-            shinkai_generate_equip_json(start2)
+            shinkai_generate_equips_json(start2)
             print('Done')
         else:
             print('Unknown choice: {}'.format(choice))
