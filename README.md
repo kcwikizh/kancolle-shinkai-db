@@ -4,7 +4,7 @@
 
 游戏舰队收藏（舰队これくしょん-舰これ-）中，深海方面的格式化数据、KcWiki Lua函数
 
-提供诸如nedb、json、lua格式的原生数据，供其他应用使用
+提供诸如json、lua格式的原生数据，供其他应用使用
 
 以及KcWiki的Lua API函数
 
@@ -34,7 +34,6 @@
 - [ ] KcWiki Doc
 
 ### Phase 5（填坑）
-- [ ] 代码优化
+- [x] 代码优化
+- [x] 从api_start2直接生成装备数据
 - [ ] Python2的支持
-- [ ] 工具：从json直接生成KcWiki的“深海列表”页面
-- [ ] 工具：从json直接生成KcWIki的“装备列表”页面
