@@ -11,6 +11,12 @@ local table = {
     concat = table.concat
 }
 
+local frame = {
+    expandTemplate = function (self, p)
+        return string.format('{{%s|%s|%s}}', p.title, p.args[1], p.args[2])
+    end
+}
+
 function doShipsMethodTest ()
     local testArgsList = {
         {'1746', '日文名'},
@@ -68,21 +74,24 @@ function doEquipsGetDataTest ()
     end
 end
 
-function doEquipsGetEquipsList ()
-    local frame = {
-        expandTemplate = function (self, p)
-            return string.format('{{%s|%s|%s}}', p.title, p.args[1], p.args[2])
-        end
-    }
+function doEquipsGetEquipsListHtml ()
     print('write equips wiki to equips_wiki.xhtml')
     local f = assert(io.open('equips_wiki.xhtml', 'w'))
-    f:write(equips_method.getEquipsList(frame))
+    f:write(equips_method.getEquipsListHtml(frame))
+    f:close()
+end
+
+function doEquipsGetEquipsListMeidawiki ()
+    print('write equips wiki to equips_wiki.mediawiki')
+    local f = assert(io.open('equips_wiki.mediawiki', 'w'))
+    f:write(equips_method.getEquipsListMediawiki(frame))
     f:close()
 end
 
 function doEquipsMethodTest ()
     doEquipsGetDataTest()
-    doEquipsGetEquipsList()
+    doEquipsGetEquipsListHtml()
+    doEquipsGetEquipsListMeidawiki()
 end
 
 

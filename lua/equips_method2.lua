@@ -361,4 +361,146 @@ function p.getEquipsList (frame)
     return table.concat(output)
 end
 
+--- Generate wiki text of '深海栖舰装备'
+-- @return string: media wiki text
+function p.getEquipsListMediawiki (frame)
+    local output = {}
+
+    -- table header
+    local header = {}
+    table.insert(header, table.concat({
+        '{| style="width: 100%; background-color: #f9f9f9; ',
+        'border: 1px #aaaaaa solid; border-collapse: collapse;"'}))
+    table.insert(header,
+        '! style="width: 5%; background-color: #e2e2e2;" | 编号')
+    table.insert(header,
+        '! style="width: 5%; background-color: #e2e2e2;" | 等级')
+    table.insert(header,
+        '! style="width: 20%; background-color: #e2e2e2;" | 名字')
+    table.insert(header,
+        '! style="width: 10%; background-color: #e2e2e2;" | 类型')
+    table.insert(header,
+        '! style="width: 40%; background-color: #e2e2e2;" | 数据')
+    table.insert(header,
+        '! style="width: 5%; background-color: #e2e2e2;" | 射程')
+    table.insert(header,
+        '! style="width: 5%; background-color: #e2e2e2;" | 备注')
+    table.insert(output, table.concat(header, '\n'))
+
+    -- Just sort the equip ID
+    local equipIdList = {}
+    for equipId in pairs(equipDataTable) do
+        table.insert(equipIdList, equipId)
+    end
+    table.sort(equipIdList)
+
+    for _, equipId in ipairs(equipIdList) do
+        local equip = equipDataTable[equipId]
+
+        -- hanlder the special case firstly
+        local handler = spicialCaseHandlers[equipId]
+        if handler then
+            handler(equip)
+        end
+
+        local equipCategory = equipCategoryTable[equip['类型'][CATEGORY]] or
+                equipCategoryTable[TYPE_UNKNOW_ID]
+        local equipIcon = equipIconTable[equip['类型'][ICON_ID]] or
+                equipIconTable[TYPE_UNKNOW_ID]
+
+        local row = {} -- single row of each equipment
+        -- equip ID
+        table.insert(row, table.concat({
+            '| style="text-align: center; vertical-align: center; ',
+            'background-color: #eaeaea; border-style: solid none; ',
+            'border-width: 1px;" | ', equipId}))
+
+        -- rare
+        table.insert(row, table.concat({
+            '| style="text-align: center; vertical-align: center; ',
+            'background-color: #f2f2f2; border-style: solid none; ',
+            'border-width: 1px;" | ', string.rep('☆', equip['稀有度'])}))
+
+        -- {
+        -- name table, include icon, name in ja and zh
+        table.insert(row, table.concat({
+            '| style="background-color: #eaeaea; border-style: solid none; ',
+            'border-width: 1px;" |'}))
+        table.insert(row, '  {|')
+        -- icon
+        table.insert(row, table.concat({
+            '   | rowspan="2" style="width: 10%;',
+            'background-color: #cacaca;" | ',
+            equipIcon}))
+        -- name
+        table.insert(row, table.concat({
+            '   | style="background-color: #cacaca;" | ',
+            frame:expandTemplate({
+                title = "lang", args = {"ja", equip['日文名']}})
+            }))
+        table.insert(row, '   |-')
+        table.insert(row, table.concat({
+            '   | style="background-color: #eaeaea;" | ', equip['中文名']}))
+        table.insert(row, '  |}')
+        -- end of name table, include icon, name in ja and zh
+        -- }
+
+        -- type
+        table.insert(row, table.concat({
+            '| style="text-align: center; vertical-align: center; ',
+            'background-color: #f2f2f2; border-style: solid none; ',
+            'border-width: 1px;" | ', equipCategory}))
+
+        -- {
+        -- type stat/attribute
+        local attribute_cell = {}
+        table.insert(attribute_cell, table.concat({
+            '| style="text-align: left; vertical-align: center; ',
+            'background-color: #eaeaea; border-style: solid none; ',
+            'border-width: 1px;" | '}))
+        for _, attrName in ipairs(attrDisplaySequence) do
+            local attrValue = equip[attrName]
+            if attrValue ~= nil then
+                attrValue = tonumber(attrValue)
+                if attrValue == nil then
+                    attrValue = errMsg('非法属性值: %s: equipid: %d',
+                        attrValue, equipId)
+                else
+                    if attrValue > 0 then
+                        attrValue = '+' .. tostring(attrValue)
+                    else
+                        attrValue = tostring(attrValue)
+                    end
+                end
+                table.insert(attribute_cell, table.concat({
+                    equipAttrIconTable[attrName], attrName, '&nbsp;',
+                    attrValue, '&nbsp;'}))
+            end
+        end -- for ipairs(attrDisplaySequence)
+        table.insert(row, table.concat(attribute_cell))
+        -- end of type stat/attribute
+        --}
+
+        -- range/leng
+        local range = equip['射程']
+        table.insert(row, table.concat({
+            '| style="text-align: center; vertical-align: center; ',
+            'background-color: #f2f2f2; border-style: solid none; ',
+            'border-width: 1px;" | ', range}))
+
+        -- remarks
+        table.insert(row, table.concat({
+            '| style="text-align: left; vertical-align: center; ',
+            'background-color: #eaeaea; border-style: solid none; ',
+            'border-width: 1px;" | ', equip['备注'] or ''}))
+
+    -- append this row to output
+    table.insert(output, table.concat(row, '\n'))
+    end -- for ipairs(equipIdList)
+
+    output[#output] = output[#output] .. '\n|}'
+
+    return table.concat(output, '\n|-\n')
+end
+
 return p
