@@ -212,7 +212,7 @@ p.getEqDataById = p.getEquipById
 
 --- Generate wiki text of '深海栖舰装备'
 -- @return string: HTML text
-function p.getEquipsList (frame)
+function p.getEquipsListHtml (frame)
     local output = {}
 
     table.insert(output, table.concat({
