@@ -72,7 +72,7 @@ def python_data_to_lua_table(data, level=0, indent=LUA_INDENT):
                                  + line + '\n' + level*indent + '}')
                 all_elements_is_pure_data = False
             elif isinstance(i, bool):
-                # this must before of int case
+                # this must before int case
                 lines.append(level*indent + '{}'.format(
                     'true' if i else 'false'))
             elif isinstance(i, int):
@@ -104,7 +104,7 @@ def python_data_to_lua_table(data, level=0, indent=LUA_INDENT):
                     lines.append(level*indent + '["{}"] = {{\n'.format(i)
                                  + line + '\n' + level*indent + '}')
             elif isinstance(data[i], bool):
-                # this must before of int case
+                # this must before int case
                 lines.append(level*indent + '["{}"] = {}'.format(i,
                     'true' if data[i] else 'false'))
             elif isinstance(data[i], int):

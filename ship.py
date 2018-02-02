@@ -11,7 +11,7 @@ SHIPS_LUA = 'lua/ships.lua'
 
 def shinkai_parse_ship(ships):
     """Get shinkai ships stored by python OrderedDict"""
-    ships_dict = OrderedDict({})
+    ships_dict = OrderedDict()
 
     for ship_id in ships:
         ship = ships[ship_id]
