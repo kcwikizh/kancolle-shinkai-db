@@ -70,7 +70,7 @@ local function getDataDirectly (ship, args, lastNumIdx)
         error(string.format('参数个数过少: %s', table.concat(args, '|')))
     end
 
-    return tostring(var)
+    return var
 end
 
 
@@ -88,6 +88,30 @@ local function getAttrData (ship, args)
         return getDataDirectly(ship, args, true)
     end
 
+    if args[3] == '速力' then
+        local soku = getDataDirectly(ship, args)
+        local t = {
+            [0] = '路基',
+            [5] = '低',
+            [10] = '高'
+        }
+        soku = t[soku]
+        return soku or '未知'
+    end
+
+    if args[3] == '射程' then
+        local leng = getDataDirectly(ship, args)
+        local t = {
+            [0] = '无',
+            [1] = '短',
+            [2] = '中',
+            [3] = '长',
+            [4] = '超长',
+            [5] = '超超长'
+        }
+        leng = t[leng]
+        return leng or '未知'
+    end
     return getDataDirectly(ship, args)
 end
 
