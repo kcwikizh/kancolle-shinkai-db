@@ -48,8 +48,7 @@ local function getDataDirectly (ship, args, lastNumIdx)
         local lastArg = args[#args]
         local data = tonumber(lastArg)
         if data == nil then
-            return false, string.format('最后一个参数不是整数: %s',
-                table.concat(args, '|'))
+            error(string.format('最后一个参数不是整数: %s', table.concat(args, '|')))
         end
         args[#args] = data
     end
@@ -58,23 +57,20 @@ local function getDataDirectly (ship, args, lastNumIdx)
         -- Skip args[1] because it's ship ID.
         if i > 1 then
             if type(var) ~= 'table' then
-                return fale, errMsg(string.format('参数个数过多: %s',
-                    table.concat(args, '|')))
+                error(string.format('参数个数过多: %s', table.concat(args, '|')))
             end
             var = var[v]
             if var == nil then
-                return false, string.format('索引越界: %s',
-                    table.concat(args, '|'))
+                error(string.format('索引越界: %s', table.concat(args, '|')))
             end
         end
     end
 
     if type(var) == 'table' then
-        return false, string.format('参数个数过少: %s',
-            table.concat(args, '|'))
+        error(string.format('参数个数过少: %s', table.concat(args, '|')))
     end
 
-    return true, tostring(var)
+    return tostring(var)
 end
 
 
@@ -85,8 +81,7 @@ end
 -- or false followed by an error message.
 local function getAttrData (ship, args)
     if #args < 3 then
-        return false, string.format('参数个数小于3: %s',
-            table.concat(args, '|'))
+        error(string.format('参数个数小于3: %s', table.concat(args, '|')))
     end
 
     if args[3] == '火力' or args[3] == '雷装' then
@@ -106,15 +101,15 @@ local function getEquipNameById (equipId)
     local equipData = equipDataTable[equipId]
 
     if equipData == nil then
-        return false, string.format('equip ID不存在: %s', equipId)
+        error(string.format('equip ID不存在: %s', equipId))
     end
 
     local equipName = equipData['中文名']
     if equipName == nil then
-        return false, string.format('中文名缺失，equip ID: %s ', equipId)
+        error(string.format('中文名缺失，equip ID: %s ', equipId))
     end
 
-    return true, equipName 
+    return equipName 
 end
 
 
@@ -125,8 +120,7 @@ end
 -- or false followed by an error message.
 local function getEquipData (ship, args)
     if #args < 3 then
-        return false, string.format('参数个数小于3: %s',
-            table.concat(args, '|'))
+        error(string.format('参数个数小于3: %s', table.concat(args, '|')))
     end
 
     local arg3 = args[3]
@@ -135,24 +129,19 @@ local function getEquipData (ship, args)
     end
 
     if arg3 == '搭载' then
-        local result, data = getDataDirectly(ship, args, true)
+        local data = getDataDirectly(ship, args, true)
         if data == '-1' then
             data = ''
         end
-        return result, data
+        return data
     end
 
     if arg3 == '装备' then
-        local result, data = getDataDirectly(ship, args, true)
-        if result == false then
-            return result, data
-        end
-
+        local data = getDataDirectly(ship, args, true)
         return getEquipNameById(data)
     end
 
-    return false, string.format('第三个参数不正确: %s',
-        table.concat(args, '|'))
+    error(string.format('第三个参数不正确: %s', table.concat(args, '|')))
 end
 
 
@@ -172,7 +161,7 @@ local function getPlanesNum (ship)
         end
     end
 
-    return true, tostring(num)
+    return tostring(num)
 end
 
 
@@ -187,7 +176,7 @@ local getShipDataMethodTable = {
     ['装备'] = getEquipData,
     ['搭载量'] = getPlanesNum,
     ['出现海域'] = function ()
-        return false, '还不支持出现海域查询'
+        error('还不支持出现海域查询')
     end
 }
 
@@ -216,7 +205,7 @@ function p.getShipDataById (frame)
             table.concat(args, '|')))
     end
 
-    local status, data = getDataMethod(ship, args)
+    local status, data = pcall(getDataMethod, ship, args)
     if status == false then
         return errMsg(data)
     end
