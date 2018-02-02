@@ -33,10 +33,13 @@ def shinkai_parse_ship(ships):
             ship['stats']['raig2']
             ]
         attributes_dict['对空'] = ship['stats']['tyku']
+        attributes_dict['对潜'] = ship['stats']['tais']
+        attributes_dict['回避'] = ship['stats']['houk']
+        attributes_dict['索敌'] = ship['stats']['saku']
+        attributes_dict['速力'] = ship['stats']['soku']
         attributes_dict['装甲'] = ship['stats']['souk']
         attributes_dict['运'] = ship['stats']['luck']
-        attributes_dict['射程'] = [
-            '无', '短', '中', '长', '超长'][ship['stats']['leng']]
+        attributes_dict['射程'] = ship['stats']['leng']
         ship_dict['属性'] = attributes_dict
 
         equip_dict = OrderedDict()
