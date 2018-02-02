@@ -95,8 +95,7 @@ local function getAttrData (ship, args)
             [5] = '低',
             [10] = '高'
         }
-        soku = t[soku]
-        return soku or '未知'
+        return t[soku] or '未知'
     end
 
     if args[3] == '射程' then
@@ -109,9 +108,9 @@ local function getAttrData (ship, args)
             [4] = '超长',
             [5] = '超超长'
         }
-        leng = t[leng]
-        return leng or '未知'
+        return t[leng] or '未知'
     end
+
     return getDataDirectly(ship, args)
 end
 
