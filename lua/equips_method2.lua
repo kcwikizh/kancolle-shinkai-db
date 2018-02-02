@@ -149,23 +149,20 @@ local function getDataDirectly (equip, args)
         -- Skip args[1] because it's equip ID.
         if i > 1 then
             if type(var) ~= 'table' then
-                return false, errMsg(string.format('参数个数过多: %s',
-                    table.concat(args, '|')))
+                error(string.format('参数个数过多: %s', table.concat(args, '|')))
             end
             var = var[v]
             if var == nil then
-                return false, string.format('索引越界: %s',
-                    table.concat(args, '|'))
+                error(string.format('索引越界: %s', table.concat(args, '|')))
             end
         end
     end
 
     if type(var) == 'table' then
-        return false, string.format('参数个数过少: %s',
-            table.concat(args, '|'))
+        error(string.format('参数个数过少: %s', table.concat(args, '|')))
     end
 
-    return true, tostring(var)
+    return tostring(var)
 end
 
 
@@ -202,7 +199,7 @@ function p.getEquipDataById (frame)
         return equip['类型'][ICON_ID]
     end
 
-    local status, data = getDataDirectly(equip, args)
+    local status, data = pcall(getDataDirectly, equip, args)
     if status == false then
         return errMsg(data)
     end
