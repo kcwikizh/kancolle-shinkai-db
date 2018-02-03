@@ -21,6 +21,7 @@ local table = {
 local string = {
     format = string.format
 }
+local UNKNOW_RETURN_VALUE = '?'
 
 
 --- Return error massage with span style HTML label
@@ -84,10 +85,6 @@ local function getAttrData (ship, args)
         error(string.format('参数个数小于3: %s', table.concat(args, '|')))
     end
 
-    if args[3] == '火力' or args[3] == '雷装' then
-        return getDataDirectly(ship, args, true)
-    end
-
     if args[3] == '速力' then
         local soku = getDataDirectly(ship, args)
         local t = {
@@ -109,6 +106,10 @@ local function getAttrData (ship, args)
             [5] = '超超长'
         }
         return t[leng] or '未知'
+    end
+
+    if args[3] == '火力' or args[3] == '雷装' then
+        return getDataDirectly(ship, args, true)
     end
 
     return getDataDirectly(ship, args)
@@ -233,7 +234,11 @@ function p.getShipDataById (frame)
         return errMsg(data)
     end
 
-    return data
+    if data == -1 then
+        return UNKNOW_RETURN_VALUE
+    else
+        return data
+    end
 end
 
 return p
