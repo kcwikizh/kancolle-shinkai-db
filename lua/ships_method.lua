@@ -22,6 +22,15 @@ local string = {
     format = string.format
 }
 local UNKNOW_RETURN_VALUE = '?'
+local planeCategoryTable = {
+    [6] = '舰上战斗机',
+    [7] = '舰上爆击机',
+    [8] = '舰上攻击机',
+    [9] = '舰上侦察机',
+    [10] = '水上侦察机',
+    [11] = '水上爆击机',
+    [41] = '大型飞行艇',
+}
 
 
 --- Return error massage with span style HTML label
@@ -38,9 +47,8 @@ end
 --- Get the data directly, specified by args
 -- @param ship: lua table of this ship
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
--- @param lastNumIdx: regard last element of args is a number or not.
--- @return (bool, string) : true and the data that user want to get,
--- or false followed by an error message.
+-- @param lastNumIdx: weather last element of args is a number or not.
+-- @return string: the data that user want to get.
 local function getDataDirectly (ship, args, lastNumIdx)
     local var = ship
 
@@ -78,8 +86,7 @@ end
 --- Get the ship attribute, specified by args, and maybe contains index at last
 -- @param ship: lua table of this ship
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
--- @return (bool, string) : true and the data that user want to get,
--- or false followed by an error message.
+-- @return string: the data that user want to get.
 local function getAttrData (ship, args)
     if #args < 3 then
         error(string.format('参数个数小于3: %s', table.concat(args, '|')))
@@ -116,17 +123,26 @@ local function getAttrData (ship, args)
 end
 
 
---- Get the equipments name, specified by id
+--- Get the equipment Lua table, specified by id
 -- @param equipId: equipment id
--- @return (bool, string) : true and the data that user want to get,
--- or false followed by an error message.
-local function getEquipNameById (equipId)
+-- @return table: the equipment Lua table
+local function getEquipDataById (equipId)
     local equipId = tostring(equipId)
     local equipData = equipDataTable[equipId]
 
     if equipData == nil then
         error(string.format('equip ID不存在: %s', equipId))
     end
+
+    return equipData
+end
+
+
+--- Get the equipments name, specified by id
+-- @param equipId: equipment id
+-- @return string: equipment chinese name
+local function getEquipNameById (equipId)
+    local equipData = getEquipDataById(equipId)
 
     local equipName = equipData['中文名']
     if equipName == nil then
@@ -137,11 +153,25 @@ local function getEquipNameById (equipId)
 end
 
 
+--- Get the equipments category, specified by id
+-- @param equipId: equipment id
+-- @return number: equipment category
+local function getEquipCategoryById (equipId)
+    local equipData = getEquipDataById(equipId)
+
+    local equipCategory = equipData['类型'][3]
+    if equipCategory == nil then
+        error(string.format('Category，equip ID: %s ', equipId))
+    end
+
+    return equipCategory
+end
+
+
 --- Get the equipments, specified by args, and maybe contains index at last
 -- @param ship: lua table of this ship
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
--- @return (bool, string) : true and the data that user want to get,
--- or false followed by an error message.
+-- @return string: the data that user want to get.
 local function getEquipData (ship, args)
     if #args < 3 then
         error(string.format('参数个数小于3: %s', table.concat(args, '|')))
@@ -153,16 +183,11 @@ local function getEquipData (ship, args)
     end
 
     if arg3 == '搭载' then
-        local data = getDataDirectly(ship, args, true)
-        if data == '-1' then
-            data = ''
-        end
-        return data
+        return getDataDirectly(ship, args, true)
     end
 
     if arg3 == '装备' then
-        local data = getDataDirectly(ship, args, true)
-        return getEquipNameById(data)
+        return getEquipNameById(getDataDirectly(ship, args, true))
     end
 
     error(string.format('第三个参数不正确: %s', table.concat(args, '|')))
@@ -171,9 +196,8 @@ end
 
 --- Get the number of total planes can carry
 -- @param ship: lua table of this ship
--- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
--- @return (bool, string) : true and the number in string format,
--- or false followed by an error message.
+-- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki
+-- @return string: the planes number
 local function getPlanesNum (ship)
     local num = 0
 
@@ -185,11 +209,42 @@ local function getPlanesNum (ship)
         end
     end
 
-    return tostring(num)
+    return num
 end
 
 
--- A table stores each method to get data
+--- Get the HTML code of equips list for KcWiki template: 深海栖舰
+-- @param ship: lua table of this ship
+-- @return string : HTML code of equips
+local function getEquipListHtml (ship)
+    local output = {}
+
+    for i, equipID in ipairs(ship['装备']['装备']) do
+        local status, name = pcall(getEquipNameById, equipID)
+        if status == false then
+            return errMsg(name)
+        end
+
+        local slotCapacity = ship['装备']['搭载'][i]
+        if slotCapacity and slotCapacity > 0 then
+            local status, category = pcall(getEquipCategoryById, equipID)
+            if status == false then
+                return errMsg(category)
+            end
+
+            if planeCategoryTable[category] then
+                name = string.format('%s(%d)', name, slotCapacity)
+            end
+        end
+
+        table.insert(output, string.format('<p>%s</p>', name))
+    end
+
+    return table.concat(output)
+end
+
+
+-- A table stores each method to get data spicified by frame.args[2]
 local getShipDataMethodTable = {
     ['日文名'] = getDataDirectly,
     ['中文名'] = getDataDirectly,
@@ -199,6 +254,7 @@ local getShipDataMethodTable = {
     ['属性'] = getAttrData,
     ['装备'] = getEquipData,
     ['搭载量'] = getPlanesNum,
+    ['装备列表'] = getEquipListHtml,
     ['出现海域'] = function ()
         error('还不支持出现海域查询')
     end
@@ -207,7 +263,7 @@ local getShipDataMethodTable = {
 
 --- Get the ship data by ship id (api_start2)
 -- @param frame: all parameters by invoke {{#invoke:}} of wiki.
--- @return string: the formated data, or error messages.
+-- @return string: the formated data.
 function p.getShipDataById (frame)
     -- Something strange that:
     -- frame.args can't be table.concat or passed to deep function as parameter
@@ -234,7 +290,7 @@ function p.getShipDataById (frame)
         return errMsg(data)
     end
 
-    if data == -1 then
+    if data == -1 or data == '-1' or data == '' then
         return UNKNOW_RETURN_VALUE
     else
         return data

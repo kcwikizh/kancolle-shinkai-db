@@ -140,8 +140,7 @@ end
 --- Get the data directly, specified by args
 -- @param equip: lua table of this equip
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
--- @return (bool, string) : true and the data that user want to get,
--- or false followed by an error message.
+-- @return string: the data that user want to get.
 local function getDataDirectly (equip, args)
     local var = equip
 
@@ -168,7 +167,7 @@ end
 
 --- Get the equip data by equip id (api_start2)
 -- @param frame: all parameters by invoke {{#invoke:}} of wiki.
--- @return string: the formated data, or error messages.
+-- @return string: the formated data.
 function p.getEquipDataById (frame)
     -- Something strange that:
     -- frame.args can't be table.concat or passed to deep function as parameter
