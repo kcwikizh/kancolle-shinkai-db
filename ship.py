@@ -21,6 +21,7 @@ def shinkai_parse_ship(ships):
         ship_dict['完整日文名'] = ship['name']['fullname_ja_jp']
         ship_dict['完整中文名'] = ship['name']['fullname_zh_cn']
         ship_dict['分类'] = ship['yomi']
+        ship_dict['kcwiki分类'] = ship['kcwiki_class']
 
         attributes_dict = OrderedDict()
         attributes_dict['耐久'] = ship['stats']['taik']

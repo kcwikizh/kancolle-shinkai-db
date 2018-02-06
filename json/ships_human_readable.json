@@ -8,6 +8,7 @@
             "fullname_zh_cn": "驱逐I级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 20,
             "houg": 5,
@@ -39,6 +40,7 @@
             "fullname_zh_cn": "驱逐RO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 22,
             "houg": 7,
@@ -70,6 +72,7 @@
             "fullname_zh_cn": "驱逐HA级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 24,
             "houg": 6,
@@ -103,6 +106,7 @@
             "fullname_zh_cn": "驱逐NI级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 28,
             "houg": 8,
@@ -136,6 +140,7 @@
             "fullname_zh_cn": "轻巡HO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 33,
             "houg": 14,
@@ -169,6 +174,7 @@
             "fullname_zh_cn": "轻巡HE级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 36,
             "houg": 16,
@@ -202,6 +208,7 @@
             "fullname_zh_cn": "轻巡TO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 39,
             "houg": 24,
@@ -237,6 +244,7 @@
             "fullname_zh_cn": "雷巡CHI级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 重雷装巡洋舰",
         "stats": {
             "taik": 48,
             "houg": 18,
@@ -272,6 +280,7 @@
             "fullname_zh_cn": "重巡RI级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 58,
             "houg": 32,
@@ -307,6 +316,7 @@
             "fullname_zh_cn": "轻母NU级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 65,
             "houg": 0,
@@ -342,6 +352,7 @@
             "fullname_zh_cn": "战舰RU级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 90,
             "houg": 65,
@@ -377,6 +388,7 @@
             "fullname_zh_cn": "空母WO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 85,
             "houg": 0,
@@ -412,6 +424,7 @@
             "fullname_zh_cn": "输送WA级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 输送舰",
         "stats": {
             "taik": 70,
             "houg": 0,
@@ -439,6 +452,7 @@
             "fullname_zh_cn": "驱逐I级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 30,
             "houg": 15,
@@ -472,6 +486,7 @@
             "fullname_zh_cn": "驱逐RO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 35,
             "houg": 20,
@@ -505,6 +520,7 @@
             "fullname_zh_cn": "驱逐HA级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 40,
             "houg": 15,
@@ -538,6 +554,7 @@
             "fullname_zh_cn": "驱逐NI级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 45,
             "houg": 20,
@@ -571,6 +588,7 @@
             "fullname_zh_cn": "轻巡HO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 48,
             "houg": 30,
@@ -604,6 +622,7 @@
             "fullname_zh_cn": "轻巡HE级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 52,
             "houg": 34,
@@ -637,6 +656,7 @@
             "fullname_zh_cn": "轻巡TO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 55,
             "houg": 36,
@@ -672,6 +692,7 @@
             "fullname_zh_cn": "雷巡CHI级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 重雷装巡洋舰",
         "stats": {
             "taik": 50,
             "houg": 35,
@@ -707,6 +728,7 @@
             "fullname_zh_cn": "重巡RI级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 60,
             "houg": 58,
@@ -744,6 +766,7 @@
             "fullname_zh_cn": "轻母NU级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 70,
             "houg": 0,
@@ -779,6 +802,7 @@
             "fullname_zh_cn": "战舰RU级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 90,
             "houg": 85,
@@ -816,6 +840,7 @@
             "fullname_zh_cn": "空母WO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 88,
             "houg": 0,
@@ -851,6 +876,7 @@
             "fullname_zh_cn": "输送WA级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 输送舰",
         "stats": {
             "taik": 80,
             "houg": 15,
@@ -886,6 +912,7 @@
             "fullname_zh_cn": "重巡RI级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 76,
             "houg": 68,
@@ -923,6 +950,7 @@
             "fullname_zh_cn": "空母WO级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 96,
             "houg": 25,
@@ -958,6 +986,7 @@
             "fullname_zh_cn": "战舰RU级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 98,
             "houg": 90,
@@ -995,6 +1024,7 @@
             "fullname_zh_cn": "潜水KA级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 19,
             "houg": 0,
@@ -1028,6 +1058,7 @@
             "fullname_zh_cn": "潜水YO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 24,
             "houg": 0,
@@ -1061,6 +1092,7 @@
             "fullname_zh_cn": "潜水KA级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 27,
             "houg": 0,
@@ -1096,6 +1128,7 @@
             "fullname_zh_cn": "潜水YO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 34,
             "houg": 0,
@@ -1131,6 +1164,7 @@
             "fullname_zh_cn": "潜水KA级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 37,
             "houg": 0,
@@ -1166,6 +1200,7 @@
             "fullname_zh_cn": "潜水YO级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 44,
             "houg": 0,
@@ -1203,6 +1238,7 @@
             "dn_suffix_ja_jp": "（A）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 88,
             "houg": 50,
@@ -1240,6 +1276,7 @@
             "dn_suffix_ja_jp": "（B）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 88,
             "houg": 50,
@@ -1277,6 +1314,7 @@
             "dn_suffix_ja_jp": "（C）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 88,
             "houg": 50,
@@ -1312,6 +1350,7 @@
             "fullname_zh_cn": "泊地栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】航空战列舰",
         "stats": {
             "taik": 180,
             "houg": 90,
@@ -1347,6 +1386,7 @@
             "fullname_zh_cn": "泊地栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 300,
             "houg": 96,
@@ -1382,6 +1422,7 @@
             "fullname_zh_cn": "战舰TA级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 84,
             "houg": 60,
@@ -1419,6 +1460,7 @@
             "fullname_zh_cn": "战舰TA级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 88,
             "houg": 75,
@@ -1456,6 +1498,7 @@
             "fullname_zh_cn": "战舰TA级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 90,
             "houg": 85,
@@ -1493,6 +1536,7 @@
             "fullname_zh_cn": "装甲空母鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】航空战列舰",
         "stats": {
             "taik": 150,
             "houg": 70,
@@ -1528,6 +1572,7 @@
             "fullname_zh_cn": "装甲空母姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 270,
             "houg": 90,
@@ -1563,6 +1608,7 @@
             "fullname_zh_cn": "南方栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】航空战列舰",
         "stats": {
             "taik": 180,
             "houg": 90,
@@ -1598,6 +1644,7 @@
             "fullname_zh_cn": "南方栖战鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】航空战列舰",
         "stats": {
             "taik": 240,
             "houg": 120,
@@ -1633,6 +1680,7 @@
             "fullname_zh_cn": "南方栖战姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【战姬】航空战列舰",
         "stats": {
             "taik": 350,
             "houg": 160,
@@ -1670,6 +1718,7 @@
             "dn_suffix_ja_jp": "（A）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 66,
             "houg": 55,
@@ -1707,6 +1756,7 @@
             "dn_suffix_ja_jp": "（B）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 66,
             "houg": 55,
@@ -1744,6 +1794,7 @@
             "dn_suffix_ja_jp": "（C）"
         },
         "yomi": "",
+        "kcwiki_class": "深海浮游型炮台",
         "stats": {
             "taik": 66,
             "houg": 55,
@@ -1779,6 +1830,7 @@
             "fullname_zh_cn": "驱逐RO级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 43,
             "houg": 33,
@@ -1814,6 +1866,7 @@
             "fullname_zh_cn": "驱逐HA级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 47,
             "houg": 30,
@@ -1849,6 +1902,7 @@
             "fullname_zh_cn": "轻巡HO级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 53,
             "houg": 42,
@@ -1885,6 +1939,7 @@
             "fullname_zh_cn": "轻巡HE级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 57,
             "houg": 48,
@@ -1922,6 +1977,7 @@
             "fullname_zh_cn": "飞机场姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 70,
@@ -1959,6 +2015,7 @@
             "fullname_zh_cn": "战舰栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】战列舰",
         "stats": {
             "taik": 400,
             "houg": 180,
@@ -1996,6 +2053,7 @@
             "fullname_zh_cn": "输送WA级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 输送舰",
         "stats": {
             "taik": 130,
             "houg": 55,
@@ -2031,6 +2089,7 @@
             "fullname_zh_cn": "雷巡CHI级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 重雷装巡洋舰",
         "stats": {
             "taik": 70,
             "houg": 50,
@@ -2066,6 +2125,7 @@
             "fullname_zh_cn": "轻母NU级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 84,
             "houg": 18,
@@ -2103,6 +2163,7 @@
             "fullname_zh_cn": "战舰RE级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 180,
             "houg": 90,
@@ -2140,6 +2201,7 @@
             "fullname_zh_cn": "战舰RE级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 270,
             "houg": 130,
@@ -2177,6 +2239,7 @@
             "fullname_zh_cn": "驱逐I级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 20,
             "houg": 39,
@@ -2212,6 +2275,7 @@
             "fullname_zh_cn": "空母WO级改flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": 40,
@@ -2249,6 +2313,7 @@
             "fullname_zh_cn": "重巡RI级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 88,
             "houg": 88,
@@ -2286,6 +2351,7 @@
             "fullname_zh_cn": "战舰RU级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 战列舰",
         "stats": {
             "taik": 130,
             "houg": 110,
@@ -2323,6 +2389,7 @@
             "fullname_zh_cn": "潜水SO级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 33,
             "houg": 24,
@@ -2356,6 +2423,7 @@
             "fullname_zh_cn": "潜水SO级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 45,
             "houg": 30,
@@ -2391,6 +2459,7 @@
             "fullname_zh_cn": "潜水SO级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 潜水艇",
         "stats": {
             "taik": 48,
             "houg": 30,
@@ -2426,6 +2495,7 @@
             "fullname_zh_cn": "港湾栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 380,
             "houg": 100,
@@ -2463,6 +2533,7 @@
             "fullname_zh_cn": "离岛栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 150,
@@ -2500,6 +2571,7 @@
             "fullname_zh_cn": "驱逐I级后期型"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 35,
             "houg": 38,
@@ -2535,6 +2607,7 @@
             "fullname_zh_cn": "驱逐RO级后期型"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 37,
             "houg": 38,
@@ -2570,6 +2643,7 @@
             "fullname_zh_cn": "驱逐HA级后期型"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 38,
             "houg": 44,
@@ -2605,6 +2679,7 @@
             "fullname_zh_cn": "驱逐NI级后期型"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 40,
             "houg": 48,
@@ -2642,6 +2717,7 @@
             "dn_suffix_ja_jp": "（白）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 96,
             "houg": 25,
@@ -2681,6 +2757,7 @@
             "dn_suffix_ja_jp": "（2014夏E2）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 360,
             "houg": 90,
@@ -2732,6 +2809,7 @@
             "dn_suffix_ja_jp": "（2014夏E2最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 170,
@@ -2781,6 +2859,7 @@
             "fullname_zh_cn": "中间栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 550,
             "houg": 100,
@@ -2832,6 +2911,7 @@
             "dn_suffix_ja_jp": "（最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 180,
@@ -2881,6 +2961,7 @@
             "fullname_zh_cn": "空母栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】正规空母",
         "stats": {
             "taik": 250,
             "houg": 120,
@@ -2918,6 +2999,7 @@
             "fullname_zh_cn": "空母栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】正规空母",
         "stats": {
             "taik": 350,
             "houg": 180,
@@ -2957,6 +3039,7 @@
             "dn_suffix_ja_jp": "（3-5）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 300,
             "houg": 80,
@@ -2996,6 +3079,7 @@
             "dn_suffix_ja_jp": "（3-5最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 390,
             "houg": 140,
@@ -3035,6 +3119,7 @@
             "dn_suffix_ja_jp": "（3-5弱）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 300,
             "houg": 60,
@@ -3074,6 +3159,7 @@
             "dn_suffix_ja_jp": "（3-5最終弱）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 390,
             "houg": 140,
@@ -3111,6 +3197,7 @@
             "fullname_zh_cn": "轻巡TSU级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 48,
             "houg": 58,
@@ -3148,6 +3235,7 @@
             "fullname_zh_cn": "轻巡TSU级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻巡洋舰",
         "stats": {
             "taik": 66,
             "houg": 64,
@@ -3185,6 +3273,7 @@
             "fullname_zh_cn": "重巡NE级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 80,
             "houg": 73,
@@ -3222,6 +3311,7 @@
             "fullname_zh_cn": "重巡NE级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 88,
             "houg": 79,
@@ -3259,6 +3349,7 @@
             "fullname_zh_cn": "驱逐栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 150,
             "houg": 59,
@@ -3294,6 +3385,7 @@
             "fullname_zh_cn": "驱逐栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 190,
             "houg": 69,
@@ -3329,6 +3421,7 @@
             "fullname_zh_cn": "空母水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【水鬼】正规空母",
         "stats": {
             "taik": 370,
             "houg": 140,
@@ -3366,6 +3459,7 @@
             "fullname_zh_cn": "空母水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【水鬼】正规空母",
         "stats": {
             "taik": 390,
             "houg": 190,
@@ -3403,6 +3497,7 @@
             "fullname_zh_cn": "轻巡栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】轻巡洋舰",
         "stats": {
             "taik": 210,
             "houg": 59,
@@ -3440,6 +3535,7 @@
             "fullname_zh_cn": "轻巡栖鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】轻巡洋舰",
         "stats": {
             "taik": 270,
             "houg": 69,
@@ -3479,6 +3575,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】战列舰",
         "stats": {
             "taik": 415,
             "houg": 188,
@@ -3540,6 +3637,7 @@
             "dn_suffix_ja_jp": "（甲、乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】战列舰",
         "stats": {
             "taik": 500,
             "houg": 198,
@@ -3621,6 +3719,7 @@
             "dn_suffix_ja_jp": "（丙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 120,
@@ -3673,6 +3772,7 @@
             "dn_suffix_ja_jp": "（甲、乙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 130,
@@ -3736,6 +3836,7 @@
             "dn_suffix_ja_jp": "（丙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 140,
@@ -3788,6 +3889,7 @@
             "dn_suffix_ja_jp": "（甲、乙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 160,
@@ -3851,6 +3953,7 @@
             "dn_suffix_ja_jp": "（乙、丙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 330,
             "houg": 120,
@@ -3914,6 +4017,7 @@
             "dn_suffix_ja_jp": "（甲前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 330,
             "houg": 130,
@@ -3966,6 +4070,7 @@
             "dn_suffix_ja_jp": "（乙、丙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 430,
             "houg": 140,
@@ -4029,6 +4134,7 @@
             "dn_suffix_ja_jp": "（甲最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 430,
             "houg": 150,
@@ -4081,6 +4187,7 @@
             "dn_suffix_ja_jp": "（4-5最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 490,
             "houg": 180,
@@ -4120,6 +4227,7 @@
             "dn_suffix_ja_jp": "（準赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 96,
             "houg": 25,
@@ -4159,6 +4267,7 @@
             "dn_suffix_ja_jp": "（赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 96,
             "houg": 25,
@@ -4198,6 +4307,7 @@
             "dn_suffix_ja_jp": "（白）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": 40,
@@ -4237,6 +4347,7 @@
             "dn_suffix_ja_jp": "（准赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": 40,
@@ -4276,6 +4387,7 @@
             "dn_suffix_ja_jp": "（赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": 40,
@@ -4315,6 +4427,7 @@
             "dn_suffix_ja_jp": "（赤）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】正规空母",
         "stats": {
             "taik": 250,
             "houg": 120,
@@ -4354,6 +4467,7 @@
             "dn_suffix_ja_jp": "（赤）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】正规空母",
         "stats": {
             "taik": 350,
             "houg": 180,
@@ -4391,6 +4505,7 @@
             "fullname_zh_cn": "驱逐I级后期型elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 39,
             "houg": 48,
@@ -4426,6 +4541,7 @@
             "fullname_zh_cn": "驱逐RO级后期型elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 43,
             "houg": 58,
@@ -4461,6 +4577,7 @@
             "fullname_zh_cn": "驱逐HA级后期型elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 46,
             "houg": 58,
@@ -4496,6 +4613,7 @@
             "fullname_zh_cn": "驱逐NI级后期型elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 49,
             "houg": 64,
@@ -4533,6 +4651,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 350,
             "houg": 75,
@@ -4572,6 +4691,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 350,
             "houg": 95,
@@ -4611,6 +4731,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 350,
             "houg": 115,
@@ -4650,6 +4771,7 @@
             "dn_suffix_ja_jp": "（丙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 130,
@@ -4700,6 +4822,7 @@
             "dn_suffix_ja_jp": "（乙前哨戦、丙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 160,
@@ -4761,6 +4884,7 @@
             "dn_suffix_ja_jp": "（甲作戦、乙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 190,
@@ -4833,6 +4957,7 @@
             "dn_suffix_ja_jp": "（丙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 85,
@@ -4885,6 +5010,7 @@
             "dn_suffix_ja_jp": "（乙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 90,
@@ -4937,6 +5063,7 @@
             "dn_suffix_ja_jp": "（甲最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 95,
@@ -4989,6 +5116,7 @@
             "dn_suffix_ja_jp": "（2015夏丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 150,
@@ -5028,6 +5156,7 @@
             "dn_suffix_ja_jp": "（2015夏乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 165,
@@ -5067,6 +5196,7 @@
             "dn_suffix_ja_jp": "（2015夏甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】陆上基地",
         "stats": {
             "taik": 450,
             "houg": 180,
@@ -5106,6 +5236,7 @@
             "dn_suffix_ja_jp": "（I）"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 鱼雷艇",
         "stats": {
             "taik": 9,
             "houg": 9,
@@ -5139,6 +5270,7 @@
             "dn_suffix_ja_jp": "（II）"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 鱼雷艇",
         "stats": {
             "taik": 9,
             "houg": 9,
@@ -5174,6 +5306,7 @@
             "dn_suffix_ja_jp": "（III）"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 鱼雷艇",
         "stats": {
             "taik": 15,
             "houg": 15,
@@ -5209,6 +5342,7 @@
             "dn_suffix_ja_jp": "（IV）"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 鱼雷艇",
         "stats": {
             "taik": 18,
             "houg": 18,
@@ -5242,6 +5376,7 @@
             "fullname_zh_cn": "轻巡栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻巡洋舰",
         "stats": {
             "taik": 230,
             "houg": 64,
@@ -5314,6 +5449,7 @@
             "fullname_zh_cn": "轻巡栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻巡洋舰",
         "stats": {
             "taik": 290,
             "houg": 74,
@@ -5375,6 +5511,7 @@
             "fullname_zh_cn": "轻巡栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻巡洋舰",
         "stats": {
             "taik": 330,
             "houg": 79,
@@ -5425,6 +5562,7 @@
             "fullname_zh_cn": "潜水栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 110,
             "houg": 50,
@@ -5572,6 +5710,7 @@
             "fullname_zh_cn": "潜水栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 130,
             "houg": 70,
@@ -5697,6 +5836,7 @@
             "fullname_zh_cn": "潜水栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 160,
             "houg": 90,
@@ -5800,6 +5940,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 100,
@@ -5861,6 +6002,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 120,
@@ -5933,6 +6075,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 255,
             "houg": 140,
@@ -5985,6 +6128,7 @@
             "dn_suffix_ja_jp": "（陸爆弱）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 50,
@@ -6024,6 +6168,7 @@
             "dn_suffix_ja_jp": "（陸爆中）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 60,
@@ -6063,6 +6208,7 @@
             "dn_suffix_ja_jp": "（陸爆強）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 70,
@@ -6102,6 +6248,7 @@
             "dn_suffix_ja_jp": "（丙、6-4）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 70,
@@ -6165,6 +6312,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 90,
@@ -6228,6 +6376,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 130,
@@ -6291,6 +6440,7 @@
             "dn_suffix_ja_jp": "（丙、6-4）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 380,
             "houg": 130,
@@ -6354,6 +6504,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 430,
             "houg": 160,
@@ -6417,6 +6568,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 190,
@@ -6480,6 +6632,7 @@
             "dn_suffix_ja_jp": "（丙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 350,
             "houg": 100,
@@ -6598,6 +6751,7 @@
             "dn_suffix_ja_jp": "（乙前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 350,
             "houg": 130,
@@ -6683,6 +6837,7 @@
             "dn_suffix_ja_jp": "（甲前哨戦）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 350,
             "houg": 160,
@@ -6768,6 +6923,7 @@
             "dn_suffix_ja_jp": "（丙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 370,
             "houg": 130,
@@ -6842,6 +6998,7 @@
             "dn_suffix_ja_jp": "（乙最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 380,
             "houg": 160,
@@ -6916,6 +7073,7 @@
             "dn_suffix_ja_jp": "（甲最終形態）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 390,
             "houg": 190,
@@ -6983,13 +7141,14 @@
         "id": 1665,
         "name": {
             "ja_jp": "砲台小鬼",
-            "zh_cn": "炮塔小鬼",
+            "zh_cn": "炮台小鬼",
             "fullname_ja_jp": "砲台小鬼",
-            "fullname_zh_cn": "炮塔小鬼",
+            "fullname_zh_cn": "炮台小鬼",
             "dn_suffix_zh_cn": "（C）",
             "dn_suffix_ja_jp": "（C）"
         },
         "yomi": "",
+        "kcwiki_class": "沿岸炮台",
         "stats": {
             "taik": 130,
             "houg": 100,
@@ -7022,13 +7181,14 @@
         "id": 1666,
         "name": {
             "ja_jp": "砲台小鬼",
-            "zh_cn": "炮塔小鬼",
+            "zh_cn": "炮台小鬼",
             "fullname_ja_jp": "砲台小鬼",
-            "fullname_zh_cn": "炮塔小鬼",
+            "fullname_zh_cn": "炮台小鬼",
             "dn_suffix_zh_cn": "（B）",
             "dn_suffix_ja_jp": "（B）"
         },
         "yomi": "",
+        "kcwiki_class": "沿岸炮台",
         "stats": {
             "taik": 130,
             "houg": 100,
@@ -7061,13 +7221,14 @@
         "id": 1667,
         "name": {
             "ja_jp": "砲台小鬼",
-            "zh_cn": "炮塔小鬼",
+            "zh_cn": "炮台小鬼",
             "fullname_ja_jp": "砲台小鬼",
-            "fullname_zh_cn": "炮塔小鬼",
+            "fullname_zh_cn": "炮台小鬼",
             "dn_suffix_zh_cn": "（A）",
             "dn_suffix_ja_jp": "（A）"
         },
         "yomi": "",
+        "kcwiki_class": "沿岸炮台",
         "stats": {
             "taik": 130,
             "houg": 100,
@@ -7105,6 +7266,7 @@
             "fullname_zh_cn": "离岛栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 480,
             "houg": 150,
@@ -7142,6 +7304,7 @@
             "fullname_zh_cn": "离岛栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 480,
             "houg": 150,
@@ -7179,6 +7342,7 @@
             "fullname_zh_cn": "离岛栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 480,
             "houg": 180,
@@ -7216,6 +7380,7 @@
             "fullname_zh_cn": "离岛栖姬"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 480,
             "houg": 180,
@@ -7255,6 +7420,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 170,
             "houg": 80,
@@ -7294,6 +7460,7 @@
             "dn_suffix_ja_jp": "（丙最終形態、乙前哨战）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 180,
             "houg": 88,
@@ -7333,6 +7500,7 @@
             "dn_suffix_ja_jp": "（乙最終形態、甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 190,
             "houg": 96,
@@ -7370,6 +7538,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 200,
             "houg": 100,
@@ -7407,6 +7576,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 220,
             "houg": 120,
@@ -7444,6 +7614,7 @@
             "fullname_zh_cn": "驱逐水鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】驱逐舰",
         "stats": {
             "taik": 240,
             "houg": 140,
@@ -7483,6 +7654,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 150,
@@ -7522,6 +7694,7 @@
             "dn_suffix_ja_jp": "（丙最終形態、乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 640,
             "houg": 170,
@@ -7561,6 +7734,7 @@
             "dn_suffix_ja_jp": "（乙最終形態、甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 680,
             "houg": 190,
@@ -7600,6 +7774,7 @@
             "dn_suffix_ja_jp": "（空袭弱）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 150,
@@ -7639,6 +7814,7 @@
             "dn_suffix_ja_jp": "（空袭強）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 150,
@@ -7678,6 +7854,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 110,
@@ -7717,6 +7894,7 @@
             "dn_suffix_ja_jp": "（丙最終形態、乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 800,
             "houg": 160,
@@ -7756,6 +7934,7 @@
             "dn_suffix_ja_jp": "（乙最終形態、甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 900,
             "houg": 200,
@@ -7795,6 +7974,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 550,
             "houg": 150,
@@ -7834,6 +8014,7 @@
             "dn_suffix_ja_jp": "（丙最終形態、乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 750,
             "houg": 180,
@@ -7873,6 +8054,7 @@
             "dn_suffix_ja_jp": "（乙最終形態、甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 850,
             "houg": 230,
@@ -7912,6 +8094,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 185,
             "houg": 90,
@@ -7951,6 +8134,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 190,
             "houg": 110,
@@ -7990,6 +8174,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 195,
             "houg": 130,
@@ -8029,6 +8214,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 110,
             "houg": 50,
@@ -8064,6 +8250,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 140,
             "houg": 70,
@@ -8101,6 +8288,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 180,
             "houg": 90,
@@ -8138,6 +8326,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】战列舰",
         "stats": {
             "taik": 400,
             "houg": 180,
@@ -8173,6 +8362,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】战列舰",
         "stats": {
             "taik": 450,
             "houg": 185,
@@ -8210,6 +8400,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】战列舰",
         "stats": {
             "taik": 530,
             "houg": 195,
@@ -8247,6 +8438,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 500,
             "houg": 170,
@@ -8286,6 +8478,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 600,
             "houg": 188,
@@ -8325,6 +8518,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 700,
             "houg": 200,
@@ -8364,6 +8558,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 444,
             "houg": 170,
@@ -8403,6 +8598,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 544,
             "houg": 188,
@@ -8442,6 +8638,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 644,
             "houg": 200,
@@ -8481,6 +8678,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 370,
             "houg": 110,
@@ -8520,6 +8718,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 430,
             "houg": 140,
@@ -8559,6 +8758,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】重巡洋舰",
         "stats": {
             "taik": 490,
             "houg": 170,
@@ -8598,6 +8798,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 370,
             "houg": 95,
@@ -8661,6 +8862,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 380,
             "houg": 135,
@@ -8724,6 +8926,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】水上机母舰",
         "stats": {
             "taik": 390,
             "houg": 175,
@@ -8787,6 +8990,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】正规空母",
         "stats": {
             "taik": 600,
             "houg": 180,
@@ -8850,6 +9054,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】正规空母",
         "stats": {
             "taik": 700,
             "houg": 220,
@@ -8913,6 +9118,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】正规空母",
         "stats": {
             "taik": 800,
             "houg": 240,
@@ -8974,6 +9180,7 @@
             "fullname_zh_cn": "空母WO级改flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": -1,
@@ -9011,6 +9218,7 @@
             "fullname_zh_cn": "空母WO级改flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
             "houg": -1,
@@ -9050,6 +9258,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 200,
@@ -9102,6 +9311,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 210,
@@ -9154,6 +9364,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 220,
@@ -9206,6 +9417,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 660,
             "houg": 220,
@@ -9258,6 +9470,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 660,
             "houg": 230,
@@ -9310,6 +9523,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 660,
             "houg": 240,
@@ -9362,6 +9576,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻型航空母舰",
         "stats": {
             "taik": 400,
             "houg": 90,
@@ -9425,6 +9640,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻型航空母舰",
         "stats": {
             "taik": 440,
             "houg": 120,
@@ -9488,6 +9704,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】轻型航空母舰",
         "stats": {
             "taik": 480,
             "houg": 150,
@@ -9551,6 +9768,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 650,
             "houg": 150,
@@ -9614,6 +9832,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 670,
             "houg": 170,
@@ -9677,6 +9896,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 690,
             "houg": 190,
@@ -9740,6 +9960,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 168,
@@ -9792,6 +10013,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 178,
@@ -9844,6 +10066,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 188,
@@ -9896,6 +10119,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 168,
@@ -9948,6 +10172,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 178,
@@ -10000,6 +10225,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战舰",
         "stats": {
             "taik": 770,
             "houg": 188,
@@ -10050,6 +10276,7 @@
             "fullname_zh_cn": "轻母NU级改elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 88,
             "houg": 35,
@@ -10087,6 +10314,7 @@
             "fullname_zh_cn": "轻母NU级改flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 118,
             "houg": 45,
@@ -10119,11 +10347,12 @@
         "id": 1736,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新栖姫",
+            "zh_cn": "潜水新栖姬",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新栖姫flagship"
+            "fullname_zh_cn": "潜水新栖姬flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 177,
             "houg": 27,
@@ -10178,11 +10407,12 @@
         "id": 1737,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新栖姫",
+            "zh_cn": "潜水新栖姬",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新栖姫flagship"
+            "fullname_zh_cn": "潜水新栖姬flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 277,
             "houg": 37,
@@ -10237,11 +10467,12 @@
         "id": 1738,
         "name": {
             "ja_jp": "潜水新棲姫",
-            "zh_cn": "潜水新栖姫",
+            "zh_cn": "潜水新栖姬",
             "fullname_ja_jp": "潜水新棲姫flagship",
-            "fullname_zh_cn": "潜水新栖姫flagship"
+            "fullname_zh_cn": "潜水新栖姬flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海旗舰【姬】潜水艇",
         "stats": {
             "taik": 377,
             "houg": 47,
@@ -10301,6 +10532,7 @@
             "fullname_zh_cn": "驱逐NA级"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 60,
             "houg": 66,
@@ -10336,6 +10568,7 @@
             "fullname_zh_cn": "驱逐NA级elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 63,
             "houg": 69,
@@ -10371,6 +10604,7 @@
             "fullname_zh_cn": "驱逐NA级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 66,
             "houg": 79,
@@ -10406,6 +10640,7 @@
             "fullname_zh_cn": "驱逐NA级后期型"
         },
         "yomi": "",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 63,
             "houg": 69,
@@ -10441,6 +10676,7 @@
             "fullname_zh_cn": "驱逐NA级后期型elite"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 66,
             "houg": 79,
@@ -10472,10 +10708,11 @@
         "name": {
             "ja_jp": "駆逐ナ級後期型",
             "zh_cn": "驱逐NA级后期型",
-            "fullname_ja_jp": "駆逐ナ級後期型flatship",
+            "fullname_ja_jp": "駆逐ナ級後期型flagship",
             "fullname_zh_cn": "驱逐NA级后期型flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 驱逐舰",
         "stats": {
             "taik": 69,
             "houg": 89,
@@ -10513,6 +10750,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 202,
@@ -10565,6 +10803,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 242,
@@ -10617,6 +10856,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 242,
@@ -10669,6 +10909,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 222,
@@ -10721,6 +10962,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 262,
@@ -10773,6 +11015,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 730,
             "houg": 282,
@@ -10823,6 +11066,7 @@
             "fullname_zh_cn": "空母夏鬼"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【鬼】航空母舰",
         "stats": {
             "taik": 340,
             "houg": 140,
@@ -10860,6 +11104,7 @@
             "fullname_zh_cn": "空母夏姫"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空母舰",
         "stats": {
             "taik": 440,
             "houg": 190,
@@ -10899,6 +11144,7 @@
             "dn_suffix_ja_jp": "（乙、丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 690,
             "houg": 115,
@@ -10984,6 +11230,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】陆上基地",
         "stats": {
             "taik": 690,
             "houg": 135,
@@ -11047,6 +11294,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 300,
@@ -11099,6 +11347,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 310,
@@ -11151,6 +11400,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 330,
@@ -11203,6 +11453,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 330,
@@ -11255,6 +11506,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 360,
@@ -11307,6 +11559,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 880,
             "houg": 390,
@@ -11357,6 +11610,7 @@
             "fullname_zh_cn": "重巡NE级flagship"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 重巡洋舰",
         "stats": {
             "taik": 220,
             "houg": 108,
@@ -11396,6 +11650,7 @@
             "dn_suffix_zh_cn": "（舰载机白）"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 70,
             "houg": 15,
@@ -11433,6 +11688,7 @@
             "dn_suffix_zh_cn": "（舰载机白）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 84,
             "houg": 18,
@@ -11472,6 +11728,7 @@
             "dn_suffix_zh_cn": "（舰载机赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 84,
             "houg": 18,
@@ -11511,6 +11768,7 @@
             "dn_suffix_zh_cn": "（舰载机白）"
         },
         "yomi": "elite",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 88,
             "houg": 35,
@@ -11550,6 +11808,7 @@
             "dn_suffix_zh_cn": "（舰载机赤）"
         },
         "yomi": "flagship",
+        "kcwiki_class": "深海常规舰队 轻空母",
         "stats": {
             "taik": 118,
             "houg": 45,
@@ -11589,6 +11848,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 102,
@@ -11641,6 +11901,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 120,
@@ -11693,6 +11954,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 144,
@@ -11745,6 +12007,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 162,
@@ -11797,6 +12060,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 182,
@@ -11849,6 +12113,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】航空战列舰",
         "stats": {
             "taik": 800,
             "houg": 202,
@@ -11901,6 +12166,7 @@
             "dn_suffix_ja_jp": "（丙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 655,
             "houg": 140,
@@ -11951,6 +12217,7 @@
             "dn_suffix_ja_jp": "（乙）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 655,
             "houg": 170,
@@ -12001,6 +12268,7 @@
             "dn_suffix_ja_jp": "（甲）"
         },
         "yomi": "",
+        "kcwiki_class": "深海旗舰【姬】驱逐舰",
         "stats": {
             "taik": 655,
             "houg": 220,

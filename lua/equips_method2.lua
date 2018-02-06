@@ -26,7 +26,7 @@ local string = {
 local attrDisplaySequence = {
     '火力', '雷装', '爆装', '对空', '装甲', '对潜', '命中', '索敌', '回避'
 }
-local TYPE_UNKNOW_ID = 99
+local TYPE_UNKNOW_ID = -1
 local equipCategoryTable = {
     [1] = '小口径主炮',
     [2] = '中口径主炮',

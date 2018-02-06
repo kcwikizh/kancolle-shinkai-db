@@ -19,7 +19,8 @@ local table = {
     insert = table.insert
 }
 local string = {
-    format = string.format
+    format = string.format,
+    find = string.find
 }
 local UNKNOW_RETURN_VALUE = '?'
 local planeCategoryTable = {
@@ -80,6 +81,32 @@ local function getDataDirectly (ship, args, lastNumIdx)
     end
 
     return var
+end
+
+
+--- Get the ship suffix
+-- @param ship: lua table of this ship
+-- @return string: 'elite', 'flagship', '后期型', '后期型elite', '后期型flagship'
+local function getSuffix (ship)
+    local fullName = ship['完整中文名']
+    local output = ''
+
+
+    if fullName == nil then
+        return output
+    end
+
+    if string.find(fullName, '后期型') then
+        output = '后期型'
+    end
+
+    if string.find(fullName, 'elite') then
+        output = output .. 'elite'
+    elseif string.find(fullName, 'flagship') then
+        output = output .. 'flagship'
+    end
+
+    return output
 end
 
 
@@ -250,7 +277,9 @@ local getShipDataMethodTable = {
     ['中文名'] = getDataDirectly,
     ['完整日文名'] = getDataDirectly,
     ['完整中文名'] = getDataDirectly,
-    ['类别'] = getDataDirectly,
+    ['分类'] = getDataDirectly,
+    ['后缀'] = getSuffix,
+    ['kcwiki分类'] = getDataDirectly,
     ['属性'] = getAttrData,
     ['装备'] = getEquipData,
     ['搭载量'] = getPlanesNum,
@@ -290,7 +319,7 @@ function p.getShipDataById (frame)
         return errMsg(data)
     end
 
-    if data == -1 or data == '-1' or data == '' then
+    if data == -1 or data == '-1' then
         return UNKNOW_RETURN_VALUE
     else
         return data
