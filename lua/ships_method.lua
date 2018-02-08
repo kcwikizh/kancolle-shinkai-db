@@ -88,7 +88,7 @@ end
 -- @param ship: lua table of this ship
 -- @return string: 'elite', 'flagship', '后期型', '后期型elite', '后期型flagship'
 local function getSuffix (ship)
-    local fullName = ship['完整中文名']
+    local fullName = ship['中文名']
     local output = ''
 
 
@@ -275,9 +275,6 @@ end
 local getShipDataMethodTable = {
     ['日文名'] = getDataDirectly,
     ['中文名'] = getDataDirectly,
-    ['完整日文名'] = getDataDirectly,
-    ['完整中文名'] = getDataDirectly,
-    ['分类'] = getDataDirectly,
     ['后缀'] = getSuffix,
     ['kcwiki分类'] = getDataDirectly,
     ['属性'] = getAttrData,
