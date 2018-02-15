@@ -20,7 +20,8 @@ local table = {
 }
 local string = {
     format = string.format,
-    find = string.find
+    find = string.find,
+    gsub = string.gsub
 }
 local UNKNOW_RETURN_VALUE = '?'
 local planeCategoryTable = {
@@ -98,6 +99,8 @@ local function getSuffix (ship)
 
     if string.find(fullName, '后期型') then
         output = '后期型'
+    elseif string.find(fullName, '改') then
+        output = '改'
     end
 
     if string.find(fullName, 'elite') then
@@ -321,6 +324,54 @@ function p.getShipDataById (frame)
     else
         return data
     end
+end
+
+local function getBasicName (ship, lang)
+    local output = ''
+    local t = {
+        ['zh'] = ship['中文名'],
+        ['ja'] = ship['日文名']
+    }
+
+    local entire_name = t[lang]
+    if entire_name == nil then
+        return output
+    end
+
+    if lang == 'zh' then
+        output = string.gsub(entire_name, '后期型', '')
+    else
+        output = string.gsub(entire_name, '後期型', '')
+    end
+    output = string.gsub(output, '改', '')
+    output = string.gsub(output, 'elite', '')
+    output = string.gsub(output, 'flagship', '')
+
+    return output
+end
+
+
+--- Get the ship name without any suffix (改, 后期型, elite, flagship)
+-- @param frame: all parameters by invoke {{#invoke:}} of wiki.
+-- @return string: the formated data.
+function p.getShipBasicNameById (frame)
+    local args = {}
+    for _, v in ipairs(frame.args) do
+        table.insert(args, v)
+    end
+    local ship = shipDataTable[args[1]]
+
+    if ship == nil then
+        return errMsg(string.format('ship ID不存在: %s', args[1]))
+    end
+
+    local lang = args[2] or ''
+    if lang ~= 'zh' and lang ~= 'ja' then
+        return errMsg(string.format('第二个参数不正确("zh" or "ja"): %s',
+            table.concat(args, '|')))
+    end
+
+    return getBasicName(ship, lang)
 end
 
 return p

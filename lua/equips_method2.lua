@@ -161,7 +161,7 @@ local function getDataDirectly (equip, args)
         error(string.format('参数个数过少: %s', table.concat(args, '|')))
     end
 
-    return tostring(var)
+    return var
 end
 
 
@@ -206,7 +206,7 @@ function p.getEquipDataById (frame)
     return data
 end
 --- Just same with "模块:舰娘装备函数改"
-p.getEqDataById = p.getEquipById
+p.getEqDataById = p.getEquipDataById
 
 
 --- Generate wiki text of '深海栖舰装备'
