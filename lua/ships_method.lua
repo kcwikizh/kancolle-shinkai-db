@@ -6,7 +6,7 @@ local p = {}
 local ships, equips = {}, {}
 if mw then
     -- Kcwiki platform
-    ships = require('模块:深海舰队数据')
+    ships = require('模块:深海栖舰数据改')
     equips = require('模块:深海装备数据')
 else
     ships = require('ships')
