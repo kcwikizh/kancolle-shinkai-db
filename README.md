@@ -24,10 +24,10 @@
 - [x] **重要**：与KcWiki技术部确定KcWiki Lua（mediawiki Lua）的格式
 - [x] 更新到KcWiki
 
-### Phase 3（啥玩意儿啊，咋回事啊，那咋整啊，大佬帮帮忙啊）
+### Phase 3
 - [x] 深海舰队函数
 - [x] 深海装备函数
-- [ ] 深海舰队模板
+- [x] 深海舰队模板
 
 ### Phase 4
 - [ ] Github Wiki
@@ -35,5 +35,5 @@
 
 ### Phase 5（填坑）
 - [x] 代码优化
-- [x] 从api_start2直接生成装备数据
+- [x] 从api\_start2直接生成装备数据
 - [ ] Python2的支持
