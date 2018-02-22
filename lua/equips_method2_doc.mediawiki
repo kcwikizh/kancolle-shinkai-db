@@ -204,10 +204,11 @@ local spicialCaseHandlers = {
 传输的参数eqiup，对应[[模块:深海装备数据]]某一个装备的table，handler函数将直接对equip内容进行修改
 <pre>
 local equips = require('模块:深海装备数据')
-local equip = equips.equipDataTable.['579']
+local equip = equips.equipDataTable['579']
 local handler = spicialCaseHandlers['579']
 if handler then
     handler(equip)
 end
 </pre>
-这个修改是持续性的，equip变量（其实是指向一张table的引用）的新内容会一直持续到某页面调用<nowiki>{{#invoke: 深海装备函数}}</nowiki>结束
+注意，这个修改是持续性的，因为equip变量其实是一个引用，指向了一个table变量。<br />
+一旦调用了<nowiki>handler(equip)</nowiki>，equip指向的table变量数据会保持被修改的状态。

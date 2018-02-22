@@ -1,0 +1,179 @@
+==写在前面==
+若您在其他页面调用了本模块函数，请将调用页面更新于此
+* [[模板:深海栖舰改]]
+若您修改了本模块的代码逻辑，请确认上述页面工作正常
+==概述==
+本模块（module）基于[[模块:深海栖舰数据改]]和[[模块:深海装备数据]]提供了以下2个API
+* 查询深海栖舰信息
+* 查询深海栖舰名，不含后缀（改，elite，后期型，flagship）
+==查询栖舰信息==
+===调用方法===
+在其他页面中调用API时，使用如下格式：
+<pre>
+{{#invoke: 深海栖舰函数改|getShipDataById|栖舰ID|参数1}}
+{{#invoke: 深海栖舰函数改|getShipDataById|栖舰ID|参数1|参数2}}
+{{#invoke: 深海栖舰函数改|getShipDataById|栖舰ID|参数1|参数2|参数3}}
+</pre>
+* 栖舰ID：舰队收藏游戏中，api_start2定义的深海装备ID
+* 参数：需要获得的参数信息
+当前支持查询的参数信息如下：<br />
+{| class="wikitable"
+! 参数1
+! 参数2
+! 参数3
+! 调用示例
+! 返回结果
+! 备注/注意点
+|-
+| 中文名
+|
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|中文名}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|中文名}}
+|
+|-
+| 日文名
+|
+|
+| <nowiki>{{lang|ja|{{#invoke: 深海栖舰函数改|getShipDataById|1542|日文名}}}}</nowiki>
+| {{lang|ja|{{#invoke: 深海栖舰函数改|getShipDataById|1542|日文名}}}}
+| 需要再次调用日语处理模板<nowiki>{{lang|ja}}</nowiki>模板来处理返回结果
+|-
+| 属性
+| 耐久<br />对空<br />对潜<br />回避<br />索敌<br />速力<br />装甲<br />运<br />射程
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|耐久}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|对空}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|对潜}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|回避}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|索敌}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|速力}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|装甲}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|运}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|射程}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|耐久}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|对空}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|对潜}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|回避}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|索敌}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|速力}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|装甲}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|运}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|射程}}
+|
+|-
+| 属性
+| 火力<br />雷装
+| 1:裸装值<br />2:栖装值
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力|1}}</nowiki><br /><nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|雷装|2}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力|1}}<br />{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|雷装|2}}
+|
+|-
+| 装备
+| 搭载
+| <整数值>
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|搭载|4}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|搭载|4}}
+| 参数3对应的装备槽的理论搭载量
+|-
+| 装备
+| 装备
+| <整数值>
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|装备|4}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|装备|4}}
+| 参数3对应的装备槽的装备'''中文名'''<br />在本示例中，TA级的第4装备槽的搭载量是4，但装备却是水上雷达 Mark.I
+|-
+| 搭载量
+|
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|搭载量}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|搭载量}}
+| 所有装备槽的理论搭载量总和
+|-
+| 装备列表
+|
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1604|装备列表}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1604|装备列表}}
+| 以<nowiki><p></p></nowiki>分隔的装备列表中文名，如果是飞机类装备，带有搭载数<br />这个接口只供[[模板:深海栖舰改]]调用，请参考：[[#装备列表|该接口实现细节]]
+|-
+| 后缀
+|
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|后缀}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|后缀}}
+| 所有可能的中文后缀，包括：<br />elite/flagship<br />后期型/后期型elite/后期型flagship<br />改/改elite/改flagship
+|-
+| kcwiki分类
+|
+|
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|kcwiki分类}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|kcwiki分类}}
+|
+|}
+[[模块:深海栖舰数据]]中，<br />
+* 日文名/中文名/kcwiki分类/属性数据/装备格数/单个装备槽搭载/单个装备槽装备，所有的整型-1和字符串型"-1"都会返回字符'?'，空白字符（串）""或" "则原样返回
+* 计算总搭载量时（如<nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|shipID|搭载量}}</nowiki>），搭载数为-1的装备槽视为搭载数0
+* 获得装备列表（如<nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|shipID|装备列表}}</nowiki>），如果某一个装备槽装备了飞机类，但对应的搭载数为-1，则返回的字符串中，只有该飞机装备的中文名，不带搭载数
+===出错返回===
+{| class="wikitable"
+! 错误调用示例
+! 返回结果
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|a}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|a}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|日文名|1}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|日文名|1}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|属性}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力|a}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|属性|火力|a}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|11542|属性|火力|1}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|11542|属性|火力|1}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|装备}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|装备}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|a}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|a}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|搭载|5}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipDataById|1542|装备|搭载|5}}
+|}
+==查询不带后缀的栖舰名==
+===调用方法===
+主要是为了[[模板:深海栖舰改]]设计的API，暂无其他用途，使用方法如下：
+<pre>
+{{#invoke: 深海栖舰函数改|getShipBasicNameById|栖舰ID|zh}}
+{{lang|ja|{{#invoke: 深海栖舰函数改|getShipBasicNameById|栖舰ID|ja}}}}
+</pre>
+第一个参数zh/ja分别表示中文名和英文名，例如ID 1744的深海栖舰'''驱逐NA级后期型flagship'''，调用该接口的结果为：<br />
+{{#invoke: 深海栖舰函数改|getShipBasicNameById|1744|zh}}<br />
+{{lang|ja|{{#invoke: 深海栖舰函数改|getShipBasicNameById|1744|ja}}}}
+===出错返回===
+{| class="wikitable"
+! 错误调用示例
+! 返回结果
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|z}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipBasicNameById|1744|z}}
+|-
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}</nowiki>
+| {{#invoke: 深海栖舰函数改|getShipBasicNameById|1744}}
+|}
+==实现细节==
+===装备列表===
+仅供[[模板:深海栖舰改]]调用的函数API：
+<pre>
+{{#invoke: 深海栖舰函数改|getShipDataById|1604|装备列表}}
+</pre>
+实际返回的结果应该是：
+<pre>
+<p>20英寸连装炮</p><p>20英寸连装炮</p><p>水上雷达 Mark.II</p><p>深海栖舰侦察机(6)</p>
+</pre>
+因为<nowiki><p></p></nowiki>会被wiki直接解析，所以不能看到<br />
+在[[模板:深海栖舰改]]中，函数返回值被赋值给变量data2，作为[[模板:InfoboxKai]]的参数使用
+==遗留问题==
+===出现海域===
+虽然在[[模块:深海栖舰数据]]中记录了出现海域数据，但并没有被使用<br />
+具体要返回什么样的格式的数据，还需要在今后的使用场景中再讨论/设计<br />
+现在调用
+<pre>
+{{#invoke: 深海栖舰函数改|getShipDataById|1745|出现海域}}
+</pre>
+都会返回<br />
+{{#invoke: 深海栖舰函数改|getShipDataById|1745|出现海域}}
