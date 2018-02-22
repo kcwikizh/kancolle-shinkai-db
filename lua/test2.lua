@@ -356,10 +356,18 @@ local function doEquipsGetEquipsListMeidawiki ()
     f:close()
 end
 
+local function doShipGetEquipListHtml ()
+    print(ships_method.getShipDataById(
+        {
+            args = {'1711', '装备列表'}
+        }))
+end
+
 
 local function doShipsMethodTest ()
     doShipGetDataTest()
     doShipGetBasicNameTest()
+    doShipGetEquipListHtml()
 end
 
 

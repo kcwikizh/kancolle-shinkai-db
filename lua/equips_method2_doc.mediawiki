@@ -1,0 +1,213 @@
+==写在前面==
+若您在其他页面调用了本模块函数，请将调用页面更新于此
+* [[深海栖舰装备]]
+若您修改了本模块的代码逻辑，请确认上述页面工作正常
+==概述==
+本模块（module）基于[[模块:深海装备数据]]提供了以下2个API
+* 查询装备信息
+* 生成页面[[深海栖舰装备|深海装备列表]]
+本模块使用Lua语法，截至2018年1月，KcWiki的Lua版本为5.1，并可使用mediawiki定制化的Lua扩展，如有您有兴趣或疑问，请参考[https://www.mediawiki.org/wiki/Extension:Scribunto/Lua_reference_manual/zh 官方参考手册]
+==查询装备信息==
+===调用方法===
+在其他页面中调用API时，使用如下格式：
+<pre>
+{{#invoke: 深海装备函数|getEquipDataById|装备ID|参数}}
+</pre>
+* 装备ID：舰队收藏游戏中，api_start2定义的深海装备ID
+* 参数：需要获得的参数信息
+当前支持查询的参数信息如下：<br />
+{| class="wikitable"
+! 参数
+! 调用示例
+! 返回结果
+! 备注/注意点
+|-
+| 中文名
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507|中文名}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507|中文名}}
+|
+|-
+| 日文名
+| <nowiki>{{lang|ja|{{#invoke: 深海装备函数|getEquipDataById|507|日文名}}}}</nowiki>
+| {{lang|ja|{{#invoke: 深海装备函数|getEquipDataById|507|日文名}}}}
+| 需要再次调用日语处理模板<nowiki>{{lang|ja}}</nowiki>模板来处理返回结果
+|-
+| 类别
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|539|类别}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|539|类别}}
+| 是装备类型五元组（api_type）的第3个元素，即&quot;{{lang|ja|カテゴリ}}(Catagory)&quot;
+|-
+| 图鉴
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|539|图鉴}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|539|图鉴}}
+| 是装备类型五元组（api_type）的第4个元素，即&quot;{{lang|ja|アイコンID}}(Icon ID)&quot;<br />但ID为579的'''深海14英寸海峡连装炮'''是一个特例[[#图鉴号/KcWiki图标文件名对应表|图鉴号/KcWiki图标文件名对应表]]
+|-
+| 稀有度
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|539|稀有度}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|539|稀有度}}
+| rowspan="10" | 所得结果是一个整型字符
+|-
+| 火力
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507|火力}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507|火力}}
+|-
+| 雷装
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|513|雷装}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|513|雷装}}
+|-
+| 爆装
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|523|爆装}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|523|爆装}}
+|-
+| 对空
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|525|对空}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|525|对空}}
+|-
+| 装甲
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|552|装甲}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|552|装甲}}
+|-
+| 对潜
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|554|对潜}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|554|对潜}}
+|-
+| 命中
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|527|命中}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|527|命中}}
+|-
+| 索敌
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|517|索敌}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|517|索敌}}
+|-
+| 回避
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|531|回避}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|531|回避}}
+|-
+| 射程
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|501|射程}}</nowiki><br /><nowiki>{{#invoke: 深海装备函数|getEquipDataById|573|射程}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|501|射程}}<br />{{#invoke: 深海装备函数|getEquipDataById|573|射程}}
+| ID为573的'''深海潜艇用木屐式机'''的射程是超超长，为真实游戏解包数据结果
+|}
+===出错返回===
+{| class="wikitable"
+! 错误调用示例
+! 返回结果
+|-
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|2507|中文名}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|2507|中文名}}
+|-
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507|a}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507|a}}
+|-
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507}}
+|-
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507|火力1}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507|火力1}}
+|-
+| <nowiki>{{#invoke: 深海装备函数|getEquipDataById|507|火力|1}}</nowiki>
+| {{#invoke: 深海装备函数|getEquipDataById|507|火力|1}}
+|}
+==生成页面深海装备列表==
+直接生成页面[[深海栖舰装备|深海装备列表]]
+===返回HTML===
+<pre>{{#invoke: 深海装备函数|getEquipsListHtml}}</pre>
+实际返回的代码'''没有空行与缩进'''，等效代码如下（截取了表头和第一行装备）：
+<pre>
+<table style="width: 100%; background-color: #f9f9f9; border: 1px #aaaaaa solid; border-collapse: collapse;">
+    <tr>
+        <th style="width: 5%; background-color: #e2e2e2;">编号</th>
+        <th style="width: 5%; background-color: #e2e2e2;">等级</th>
+        <th style="width: 20%; background-color: #e2e2e2;">名字</th>
+        <th style="width: 10%; background-color: #e2e2e2;">类型</th>
+        <th style="width: 40%; background-color: #e2e2e2;">数据</th>
+        <th style="width: 5%; background-color: #e2e2e2;">射程</th>
+        <th style="width: 15%; background-color: #e2e2e2;">备注</th>
+    </tr>
+    <tr>
+        <td style="text-align: center; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;">501</td>
+        <td style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;"></td>
+        <td style="background-color: #eaeaea; border-style: solid none; border-width: 1px;">
+            <table>
+                <tr>
+                    <td rowspan="2" style="width: 10%; background-color: #cacaca;">[[文件:IcoMainLight.png|35px|小口径主炮]]</td>
+                    <td style="background-color: #cacaca;">{{lang|ja|5inch単装砲}}
+                </tr>
+                <tr>
+                    <td style="background-color: #eaeaea;">5英寸单装炮</td>
+                </tr>
+            </table>
+        </td>
+        <td style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;">小口径主炮</td>
+        <td style="text-align: left; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;">[[文件:IcoAtk.png|20px|火力]]火力&nbsp;+1&nbsp;</td>
+        <td style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;">短</td>
+        <td style="text-align: left; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;"></td>
+    </tr>
+</table>
+</pre>
+===返回mediawiki表格===
+<pre>{{#invoke: 深海装备函数|getEquipsListMediawiki}}</pre>
+返回的代码如下（截取了表头和第一行装备）：
+<pre>
+{| style="width: 100%; background-color: #f9f9f9; border: 1px #aaaaaa solid; border-collapse: collapse;"
+! style="width: 5%; background-color: #e2e2e2;" | 编号
+! style="width: 5%; background-color: #e2e2e2;" | 等级
+! style="width: 20%; background-color: #e2e2e2;" | 名字
+! style="width: 10%; background-color: #e2e2e2;" | 类型
+! style="width: 40%; background-color: #e2e2e2;" | 数据
+! style="width: 5%; background-color: #e2e2e2;" | 射程
+! style="width: 5%; background-color: #e2e2e2;" | 备注
+|-
+| style="text-align: center; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;" | 501
+| style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;" | 
+| style="background-color: #eaeaea; border-style: solid none; border-width: 1px;" |
+  {|
+   | rowspan="2" style="width: 10%;background-color: #cacaca;" | [[文件:IcoMainLight.png|35px|小口径主炮]]
+   | style="background-color: #cacaca;" | {{lang|ja|5inch単装砲}}
+   |-
+   | style="background-color: #eaeaea;" | 5英寸单装炮
+  |}
+| style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;" | 小口径主炮
+| style="text-align: left; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;" | [[文件:IcoAtk.png|20px|火力]]火力&nbsp;+1&nbsp;
+| style="text-align: center; vertical-align: center; background-color: #f2f2f2; border-style: solid none; border-width: 1px;" | 短
+| style="text-align: left; vertical-align: center; background-color: #eaeaea; border-style: solid none; border-width: 1px;" | 
+|}
+</pre>
+==实现细节==
+===类别/中文对应表===
+table变量
+<pre>
+equipCategoryTable
+</pre>
+是装备类型五元组（api_type）的第3个元素，即&quot;{{lang|ja|カテゴリ}}(Catagory)&quot;与中文的对应关系表
+===图鉴号/KcWiki图标文件名对应表===
+table变量
+<pre>
+equipIconTable
+</pre>
+是装备类型五元组（api_type）的第4个元素，即&quot;{{lang|ja|アイコンID}}(Icon ID)&quot;与KcWiki存储的，图标文件对应关系表<br />
+但ID为579的'''深海14英寸海峡连装炮'''是一个特例，api_start2的解包数据里，该装备的Icon ID是1，表示小口径主炮<br />
+所以，在所有尝试获得Icon ID的操作前，都必须做特殊情况处理。<br />
+为了保持程序的可扩展性，防止有新装备出现类似的异常情况，table变量
+<pre>
+local spicialCaseHandlers = {
+    ['579'] = function (equip)
+        -- Fix icon id of 深海14英寸海峡连装炮
+        --
+        -- original value in start2 is: 1 小口径主炮
+        -- fix it to: 3 大口径主炮
+        equip['类型'][ICON_ID] = 3
+    end
+}
+</pre>
+保存了装备ID对应的处理函数，一旦table中记录了装备ID对应的函数，就调用该处理函数<br />
+传输的参数eqiup，对应[[模块:深海装备数据]]某一个装备的table，handler函数将直接对equip内容进行修改
+<pre>
+local equips = require('模块:深海装备数据')
+local equip = equips.equipDataTable.['579']
+local handler = spicialCaseHandlers['579']
+if handler then
+    handler(equip)
+end
+</pre>
+这个修改是持续性的，equip变量（其实是指向一张table的引用）的新内容会一直持续到某页面调用<nowiki>{{#invoke: 深海装备函数}}</nowiki>结束

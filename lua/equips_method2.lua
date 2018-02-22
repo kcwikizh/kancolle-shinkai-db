@@ -20,6 +20,7 @@ local table = {
     sort = table.sort
 }
 local string = {
+    gsub = string.gsub,
     format = string.format,
     rep = string.rep
 }
@@ -137,6 +138,14 @@ local function errMsg (msg)
 end
 
 
+--- Trim string
+-- @param s: original string.
+-- @return string: string that been trimmed
+local function trim (s)
+    return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+
 --- Get the data directly, specified by args
 -- @param equip: lua table of this equip
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
@@ -148,17 +157,17 @@ local function getDataDirectly (equip, args)
         -- Skip args[1] because it's equip ID.
         if i > 1 then
             if type(var) ~= 'table' then
-                error(string.format('参数个数过多: %s', table.concat(args, '|')))
+                error(string.format('参数个数过多: %s', table.concat(args, ', ')))
             end
             var = var[v]
             if var == nil then
-                error(string.format('索引越界: %s', table.concat(args, '|')))
+                error(string.format('索引越界: %s', table.concat(args, ', ')))
             end
         end
     end
 
     if type(var) == 'table' then
-        error(string.format('参数个数过少: %s', table.concat(args, '|')))
+        error(string.format('参数个数过少: %s', table.concat(args, ', ')))
     end
 
     return var
@@ -175,7 +184,7 @@ function p.getEquipDataById (frame)
     -- assign it to a local variable 'args', it works.
     local args = {}
     for _, v in ipairs(frame.args) do
-        table.insert(args, v)
+        table.insert(args, trim(v))
     end
     local equipId = args[1]
     local equip = equipDataTable[equipId]

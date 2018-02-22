@@ -46,6 +46,14 @@ local function errMsg (msg)
 end
 
 
+--- Trim string
+-- @param s: original string.
+-- @return string: string that been trimmed
+local function trim (s)
+    return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+
 --- Get the data directly, specified by args
 -- @param ship: lua table of this ship
 -- @param args: frame.args, all parameters by invoke {{#invoke:}} of wiki.
@@ -59,7 +67,7 @@ local function getDataDirectly (ship, args, lastNumIdx)
         local lastArg = args[#args]
         local data = tonumber(lastArg)
         if data == nil then
-            error(string.format('最后一个参数不是整数: %s', table.concat(args, '|')))
+            error(string.format('最后一个参数不是整数: %s', table.concat(args, ', ')))
         end
         args[#args] = data
     end
@@ -68,17 +76,17 @@ local function getDataDirectly (ship, args, lastNumIdx)
         -- Skip args[1] because it's ship ID.
         if i > 1 then
             if type(var) ~= 'table' then
-                error(string.format('参数个数过多: %s', table.concat(args, '|')))
+                error(string.format('参数个数过多: %s', table.concat(args, ', ')))
             end
             var = var[v]
             if var == nil then
-                error(string.format('索引越界: %s', table.concat(args, '|')))
+                error(string.format('索引越界: %s', table.concat(args, ', ')))
             end
         end
     end
 
     if type(var) == 'table' then
-        error(string.format('参数个数过少: %s', table.concat(args, '|')))
+        error(string.format('参数个数过少: %s', table.concat(args, ', ')))
     end
 
     return var
@@ -119,7 +127,7 @@ end
 -- @return string: the data that user want to get.
 local function getAttrData (ship, args)
     if #args < 3 then
-        error(string.format('参数个数小于3: %s', table.concat(args, '|')))
+        error(string.format('参数个数小于3: %s', table.concat(args, ', ')))
     end
 
     if args[3] == '速力' then
@@ -204,7 +212,7 @@ end
 -- @return string: the data that user want to get.
 local function getEquipData (ship, args)
     if #args < 3 then
-        error(string.format('参数个数小于3: %s', table.concat(args, '|')))
+        error(string.format('参数个数小于3: %s', table.concat(args, ', ')))
     end
 
     local arg3 = args[3]
@@ -220,7 +228,7 @@ local function getEquipData (ship, args)
         return getEquipNameById(getDataDirectly(ship, args, true))
     end
 
-    error(string.format('第三个参数不正确: %s', table.concat(args, '|')))
+    error(string.format('第三个参数不正确: %s', table.concat(args, ', ')))
 end
 
 
@@ -300,7 +308,7 @@ function p.getShipDataById (frame)
     -- assign it to a local variable 'args', it works.
     local args = {}
     for _, v in ipairs(frame.args) do
-        table.insert(args, v)
+        table.insert(args, trim(v))
     end
     local ship = shipDataTable[args[1]]
 
@@ -311,7 +319,7 @@ function p.getShipDataById (frame)
     local getDataMethod = getShipDataMethodTable[args[2]]
     if getDataMethod == nil then
         return errMsg(string.format('第二个参数不正确: %s',
-            table.concat(args, '|')))
+            table.concat(args, ', ')))
     end
 
     local status, data = pcall(getDataMethod, ship, args)
@@ -357,7 +365,7 @@ end
 function p.getShipBasicNameById (frame)
     local args = {}
     for _, v in ipairs(frame.args) do
-        table.insert(args, v)
+        table.insert(args, trim(v))
     end
     local ship = shipDataTable[args[1]]
 
@@ -368,7 +376,7 @@ function p.getShipBasicNameById (frame)
     local lang = args[2] or ''
     if lang ~= 'zh' and lang ~= 'ja' then
         return errMsg(string.format('第二个参数不正确("zh" or "ja"): %s',
-            table.concat(args, '|')))
+            table.concat(args, ', ')))
     end
 
     return getBasicName(ship, lang)
