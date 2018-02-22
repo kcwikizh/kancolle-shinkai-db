@@ -31,7 +31,7 @@
 
 ### Phase 4
 - [ ] Github Wiki
-- [ ] KcWiki Doc
+- [x] KcWiki Doc
 
 ### Phase 5（填坑）
 - [x] 代码优化
