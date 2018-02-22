@@ -296,7 +296,7 @@ function p.getEquipsListHtml (frame)
             '<td style="background-color: #cacaca;">',
             frame:expandTemplate({
                 title = "lang", args = {"ja", equip['日文名']}}),
-            '</tr>'}))
+            '</td></tr>'}))
         table.insert(output, table.concat({
             '<tr><td style="background-color: #eaeaea;">',
             equip['中文名'], '</td></tr>'}))
