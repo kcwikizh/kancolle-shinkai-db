@@ -30,7 +30,7 @@
 - [x] 模板:深海栖舰改
 
 ### Phase 4
-- [ ] Github Wiki
+- [x] Github Wiki
 - [x] KcWiki Doc
 
 ### Phase 5（填坑）
