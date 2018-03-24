@@ -9183,18 +9183,18 @@
         "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
-            "houg": -1,
+            "houg": 40,
             "houg2": -1,
             "raig": 0,
             "raig2": 0,
-            "tyku": -1,
+            "tyku": 90,
             "tais": 0,
             "houk": -1,
             "saku": -1,
             "soku": 10,
             "souk": -1,
             "luck": -1,
-            "leng": -1
+            "leng": 0
         },
         "equips": [
             556,
@@ -9221,18 +9221,18 @@
         "kcwiki_class": "深海常规舰队 正规空母",
         "stats": {
             "taik": 160,
-            "houg": -1,
+            "houg": 40,
             "houg2": -1,
             "raig": 0,
             "raig2": 0,
-            "tyku": -1,
+            "tyku": 90,
             "tais": 0,
             "houk": -1,
             "saku": -1,
             "soku": 10,
             "souk": -1,
             "luck": -1,
-            "leng": -1
+            "leng": 0
         },
         "equips": [
             556,
