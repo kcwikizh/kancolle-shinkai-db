@@ -149,10 +149,10 @@
 | <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}</nowiki>
 | {{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}
 |-
-| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|z}}</nowiki>
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|1744|z}}</nowiki>
 | {{#invoke: 深海栖舰函数改|getShipBasicNameById|1744|z}}
 |-
-| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|11744|zh}}</nowiki>
+| <nowiki>{{#invoke: 深海栖舰函数改|getShipBasicNameById|1744}}</nowiki>
 | {{#invoke: 深海栖舰函数改|getShipBasicNameById|1744}}
 |}
 ==实现细节==
