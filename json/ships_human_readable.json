@@ -2345,10 +2345,10 @@
     "1567": {
         "id": 1567,
         "name": {
-            "ja_jp": "戦艦ル級",
-            "zh_cn": "战舰RU级",
-            "fullname_ja_jp": "戦艦ル級flagship",
-            "fullname_zh_cn": "战舰RU级flagship"
+            "ja_jp": "戦艦ル級改",
+            "zh_cn": "战舰RU级改",
+            "fullname_ja_jp": "戦艦ル級改flagship",
+            "fullname_zh_cn": "战舰RU级改flagship"
         },
         "yomi": "flagship",
         "kcwiki_class": "深海常规舰队 战列舰",
@@ -12054,7 +12054,7 @@
         "name": {
             "ja_jp": "海峡夜棲姫-壊",
             "zh_cn": "海峡夜栖姬-坏",
-            "fullname_ja_jp": "海峡夜棲姫壊",
+            "fullname_ja_jp": "海峡夜棲姫-壊",
             "fullname_zh_cn": "海峡夜栖姬-坏",
             "dn_suffix_zh_cn": "（乙）",
             "dn_suffix_ja_jp": "（乙）"
